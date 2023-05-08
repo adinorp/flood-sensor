@@ -9,6 +9,7 @@
 #define UART_H_
 
 #include "main.h"
+#include <string.h>
 
 #define DEBUG_UART_TIMEOUT 10
 

@@ -1,0 +1,9 @@
+Spi.c:10:6:Spi1_Transmit	2
+Spi.c:21:6:Spi1_Receive	2
+Spi.c:36:6:SPI_WriteByte	2
+Spi.c:53:6:SPI_WriteByte_OneByteAddr	2
+Spi.c:74:9:SPI_ReadByte	2
+Spi.c:93:9:SPI_ReadByte_OneByteAddr	3
+Spi.c:112:6:SPI_WriteArray	2
+Spi.c:127:6:SPI_ReadArray	2
+Spi.c:142:6:Error_Spi	1

@@ -56,8 +56,18 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
+void rTosDelay(uint32_t Delay);
 UART_HandleTypeDef *Get_DebugHandle(void);
 osMessageQId Get_TerminalQueueHandle(void);
+UART_HandleTypeDef *Get_SonarHandle(void);
+RTC_HandleTypeDef  *Get_RtcHandle(void);
+SPI_HandleTypeDef   *Get_SpiHandle(void);
+osMutexId  Get_UartMutexHandle(void);
+osMutexId  Get_SpiMutexHandle(void);
+osMutexId  Get_I2cMutexHandle(void);
+osMutexId  Get_RtcMutexHandle(void);
+I2C_HandleTypeDef   *Get_I2cHandle(void);
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

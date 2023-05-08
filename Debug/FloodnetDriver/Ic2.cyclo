@@ -1,0 +1,7 @@
+Ic2.c:10:6:I2C_waiter	3
+Ic2.c:30:6:I2C_Write	2
+Ic2.c:48:6:I2C_Read	2
+Ic2.c:64:6:I2C_Mem_WriteReg	2
+Ic2.c:82:6:I2C_Mem_ReadReg	2
+Ic2.c:99:6:I2C_ReverseWord	1
+Ic2.c:106:6:I2C_PresenceCheck_OneByteRegAddr	2

@@ -119,7 +119,7 @@ void CommandLineProcessCommand(char * buffer)
 
 	int idx;
 	int CommandFound = false;
-	char *Com= strtok(buffer,"+");
+	//char *Com= strtok(buffer,"+");
 	char *Arg = strtok(NULL,"+");
 
 	/* Search for the command in the command table until it is found or

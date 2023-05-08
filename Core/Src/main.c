@@ -43,6 +43,8 @@
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc;
 
+I2C_HandleTypeDef hi2c2;
+
 UART_HandleTypeDef hlpuart1;
 UART_HandleTypeDef huart2;
 
@@ -52,6 +54,10 @@ SPI_HandleTypeDef hspi2;
 
 osThreadId terminalTaskHandle;
 osMessageQId xQueue1Handle;
+osMutexId UartMutexHandle;
+osMutexId SpiMutexHandle;
+osMutexId I2cMutexHandle;
+osMutexId RtcMutexHandle;
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -64,6 +70,7 @@ static void MX_LPUART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_RTC_Init(void);
 static void MX_SPI2_Init(void);
+static void MX_I2C2_Init(void);
 void terminalTaskHandler(void const * argument);
 
 /* USER CODE BEGIN PFP */
@@ -108,9 +115,27 @@ int main(void)
   MX_USART2_UART_Init();
   MX_RTC_Init();
   MX_SPI2_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
+
+  /* Create the mutex(es) */
+  /* definition and creation of UartMutex */
+  osMutexDef(UartMutex);
+  UartMutexHandle = osMutexCreate(osMutex(UartMutex));
+
+  /* definition and creation of SpiMutex */
+  osMutexDef(SpiMutex);
+  SpiMutexHandle = osMutexCreate(osMutex(SpiMutex));
+
+  /* definition and creation of I2cMutex */
+  osMutexDef(I2cMutex);
+  I2cMutexHandle = osMutexCreate(osMutex(I2cMutex));
+
+  /* definition and creation of RtcMutex */
+  osMutexDef(RtcMutex);
+  RtcMutexHandle = osMutexCreate(osMutex(RtcMutex));
 
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
@@ -253,6 +278,54 @@ static void MX_ADC_Init(void)
   /* USER CODE BEGIN ADC_Init 2 */
 
   /* USER CODE END ADC_Init 2 */
+
+}
+
+/**
+  * @brief I2C2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C2_Init(void)
+{
+
+  /* USER CODE BEGIN I2C2_Init 0 */
+
+  /* USER CODE END I2C2_Init 0 */
+
+  /* USER CODE BEGIN I2C2_Init 1 */
+
+  /* USER CODE END I2C2_Init 1 */
+  hi2c2.Instance = I2C2;
+  hi2c2.Init.Timing = 0x20303E5D;
+  hi2c2.Init.OwnAddress1 = 0;
+  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c2.Init.OwnAddress2 = 0;
+  hi2c2.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Analogue filter
+  */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c2, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Digital filter
+  */
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c2, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C2_Init 2 */
+
+  /* USER CODE END I2C2_Init 2 */
 
 }
 
@@ -489,8 +562,8 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, ADC_SW_Pin|MB_OC_Pin|LED_Pin, GPIO_PIN_RESET);
@@ -517,18 +590,68 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void rTosDelay(uint32_t Delay)
+{
+  osDelay(Delay);
+}
+
+
 UART_HandleTypeDef *Get_DebugHandle(void)
 {
   return &huart2;
 }
 
+UART_HandleTypeDef *Get_SonarHandle(void)
+{
+  return &hlpuart1;;
+}
+
+RTC_HandleTypeDef  *Get_RtcHandle(void)
+{
+  return &hrtc;
+}
+
+SPI_HandleTypeDef   *Get_SpiHandle(void)
+{
+  return &hspi2;
+}
+
+I2C_HandleTypeDef   *Get_I2cHandle(void)
+{
+  return &hi2c2;
+}
+
+
+osMutexId  Get_UartMutexHandle(void)
+{
+  return UartMutexHandle;
+}
+
+osMutexId  Get_SpiMutexHandle(void)
+{
+  return SpiMutexHandle;;
+}
+
+osMutexId  Get_I2cMutexHandle(void)
+{
+  return I2cMutexHandle;;
+}
+
+osMutexId  Get_RtcMutexHandle(void)
+{
+  return RtcMutexHandle;;
+}
+
+
+
+
 osMessageQId Get_TerminalQueueHandle(void)
 {
   return xQueue1Handle;;
 }
+
+
 /* USER CODE END 4 */
-
-
 
 
 /**

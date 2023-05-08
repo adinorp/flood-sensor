@@ -5,12 +5,18 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../FloodnetDriver/Ic2.c \
+../FloodnetDriver/Spi.c \
 ../FloodnetDriver/Uart.c 
 
 OBJS += \
+./FloodnetDriver/Ic2.o \
+./FloodnetDriver/Spi.o \
 ./FloodnetDriver/Uart.o 
 
 C_DEPS += \
+./FloodnetDriver/Ic2.d \
+./FloodnetDriver/Spi.d \
 ./FloodnetDriver/Uart.d 
 
 
@@ -21,7 +27,7 @@ FloodnetDriver/%.o FloodnetDriver/%.su FloodnetDriver/%.cyclo: ../FloodnetDriver
 clean: clean-FloodnetDriver
 
 clean-FloodnetDriver:
-	-$(RM) ./FloodnetDriver/Uart.cyclo ./FloodnetDriver/Uart.d ./FloodnetDriver/Uart.o ./FloodnetDriver/Uart.su
+	-$(RM) ./FloodnetDriver/Ic2.cyclo ./FloodnetDriver/Ic2.d ./FloodnetDriver/Ic2.o ./FloodnetDriver/Ic2.su ./FloodnetDriver/Spi.cyclo ./FloodnetDriver/Spi.d ./FloodnetDriver/Spi.o ./FloodnetDriver/Spi.su ./FloodnetDriver/Uart.cyclo ./FloodnetDriver/Uart.d ./FloodnetDriver/Uart.o ./FloodnetDriver/Uart.su
 
 .PHONY: clean-FloodnetDriver
 

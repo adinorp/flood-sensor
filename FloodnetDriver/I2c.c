@@ -5,7 +5,7 @@
  *      Author: adinor
  */
 
-#include "Ic2.h"
+#include "I2c.h"
 
 bool I2C_waiter()
 {

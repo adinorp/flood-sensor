@@ -5,8 +5,8 @@
  *      Author: adinor
  */
 
-#ifndef IC2_H_
-#define IC2_H_
+#ifndef I2C_H_
+#define I2C_H_
 
 #include "main.h"
 #include <stdbool.h>
@@ -40,4 +40,4 @@ bool I2C_Mem_ReadReg(uint8_t dev_address, uint8_t reg_address, uint8_t *data,
 void I2C_ReverseWord(uint8_t* word);
 bool I2C_PresenceCheck_OneByteRegAddr(I2C_HandleTypeDef *i2cBus, uint8_t dev_address);
 
-#endif /* IC2_H_ */
+#endif /* I2C_H_ */

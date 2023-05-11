@@ -1,4 +1,4 @@
-FloodnetDriver/Ic2.o: ../FloodnetDriver/Ic2.c ../FloodnetDriver/Ic2.h \
+FloodnetDriver/Adc.o: ../FloodnetDriver/Adc.c ../FloodnetDriver/Adc.h \
  ../Core/Inc/main.h ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h \
  ../Core/Inc/stm32wlxx_hal_conf.h \
  ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_dma.h \
@@ -60,7 +60,7 @@ FloodnetDriver/Ic2.o: ../FloodnetDriver/Ic2.c ../FloodnetDriver/Ic2.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
-../FloodnetDriver/Ic2.h:
+../FloodnetDriver/Adc.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:
 ../Core/Inc/stm32wlxx_hal_conf.h:

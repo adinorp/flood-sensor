@@ -1,7 +1,0 @@
-../FloodnetDriver/Ic2.c:10:6:I2C_waiter	16	static
-../FloodnetDriver/Ic2.c:30:6:I2C_Write	40	static
-../FloodnetDriver/Ic2.c:48:6:I2C_Read	40	static
-../FloodnetDriver/Ic2.c:64:6:I2C_Mem_WriteReg	40	static
-../FloodnetDriver/Ic2.c:82:6:I2C_Mem_ReadReg	40	static
-../FloodnetDriver/Ic2.c:99:6:I2C_ReverseWord	24	static
-../FloodnetDriver/Ic2.c:106:6:I2C_PresenceCheck_OneByteRegAddr	24	static

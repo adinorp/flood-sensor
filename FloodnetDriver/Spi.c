@@ -30,9 +30,6 @@ bool Spi1_Receive(uint8_t *buff, uint16_t size)
 }
 
 
-
-
-
 bool SPI_WriteByte(SPI_HandleTypeDef *spiHandle, uint8_t command)
 {
   bool writeComplete = false;

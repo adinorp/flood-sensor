@@ -1,4 +1,4 @@
 ../FloodnetTasks/TerminalTask.c:58:6:terminalTaskHandler	24	static
-../FloodnetTasks/TerminalTask.c:84:5:CommandLineBuildCommand	16	static
-../FloodnetTasks/TerminalTask.c:117:6:CommandLineProcessCommand	40	static
-../FloodnetTasks/TerminalTask.c:147:6:HAL_UART_RxCpltCallback	16	static
+../FloodnetTasks/TerminalTask.c:85:5:CommandLineBuildCommand	16	static
+../FloodnetTasks/TerminalTask.c:118:6:CommandLineProcessCommand	40	static
+../FloodnetTasks/TerminalTask.c:148:6:HAL_UART_RxCpltCallback	16	static

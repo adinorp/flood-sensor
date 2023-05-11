@@ -62,6 +62,7 @@ void terminalTaskHandler(void const * argument)
 	char tRxedChar;
 	HAL_UART_Receive_IT(Get_DebugHandle(),(uint8_t*)uartData,UART_RECEIVE_SIZE);
 	/* Infinite loop */
+	serialPutStr("Terminal Thread Initialized");
 	for(;;)
 	{
 		/* Process Terminal Commands */

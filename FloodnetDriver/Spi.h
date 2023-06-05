@@ -19,6 +19,7 @@
 
 bool Spi1_Transmit(uint8_t *buff, uint16_t size);
 bool Spi1_Receive(uint8_t *buff, uint16_t size);
+bool Spi1_TransmitReceive(uint8_t *pTxData, uint8_t *pRxData, uint16_t Size);
 bool SPI_WriteByte(SPI_HandleTypeDef *spiHandle, uint8_t value);
 bool SPI_WriteByte_OneByteAddr(SPI_HandleTypeDef *spiHandle, uint8_t reg, uint8_t data);
 uint8_t SPI_ReadByte(SPI_HandleTypeDef *spiHandle);

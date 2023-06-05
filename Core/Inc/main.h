@@ -68,10 +68,14 @@ osMutexId  Get_I2cMutexHandle(void);
 osMutexId  Get_RtcMutexHandle(void);
 I2C_HandleTypeDef   *Get_I2cHandle(void);
 ADC_HandleTypeDef *Get_AdcHandle(void);
+void terminalTaskHandler(void const * argument);
 
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define RTC_PREDIV_A ((1<<(15-RTC_N_PREDIV_S))-1)
+#define RTC_N_PREDIV_S 10
+#define RTC_PREDIV_S ((1<<RTC_N_PREDIV_S)-1)
 #define ADC_SW_Pin GPIO_PIN_7
 #define ADC_SW_GPIO_Port GPIOB
 #define MB_OC_Pin GPIO_PIN_5
@@ -82,6 +86,8 @@ ADC_HandleTypeDef *Get_AdcHandle(void);
 #define LED_GPIO_Port GPIOB
 #define EXT_PWR_Pin GPIO_PIN_9
 #define EXT_PWR_GPIO_Port GPIOA
+#define MB_RX_Pin GPIO_PIN_1
+#define MB_RX_GPIO_Port GPIOC
 #define MB_CTL_Pin GPIO_PIN_0
 #define MB_CTL_GPIO_Port GPIOC
 

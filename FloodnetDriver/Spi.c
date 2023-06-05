@@ -7,6 +7,7 @@
 
 #include "Spi.h"
 
+
 bool Spi1_Transmit(uint8_t *buff, uint16_t size)
 {
   bool status = false;
@@ -27,6 +28,16 @@ bool Spi1_Receive(uint8_t *buff, uint16_t size)
   }
 
   return status;
+}
+
+bool Spi1_TransmitReceive(uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)
+{
+	bool status = false;
+	if(HAL_SPI_TransmitReceive (Get_SpiHandle(), pTxData, pRxData, Size, SPI_TIMEOUT) == HAL_OK)
+	{
+	   status = true;
+	}
+	return status;
 }
 
 

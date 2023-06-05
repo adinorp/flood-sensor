@@ -7,7 +7,10 @@
 
 #ifndef RTC_H_
 #define RTC_H_
+#include "main.h"
 
+void RTC_TimeShow(char *showtime);
+void RTC_DateShow(char *showdate);
 
 
 #endif /* RTC_H_ */

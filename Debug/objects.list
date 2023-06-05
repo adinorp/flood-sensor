@@ -34,6 +34,7 @@
 "./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_adc.o"
 "./FloodnetDriver/Adc.o"
 "./FloodnetDriver/Bme280.o"
+"./FloodnetDriver/DeviceCommands.o"
 "./FloodnetDriver/ExtFlash.o"
 "./FloodnetDriver/Gpio.o"
 "./FloodnetDriver/I2c.o"

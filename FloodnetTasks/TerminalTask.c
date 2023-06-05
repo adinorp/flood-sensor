@@ -8,6 +8,7 @@
 
 //#include "Uart_Driver.h"
 #include "TerminalTask.h"
+#include "DeviceCommands.h"
 #include "Uart.h"
 
 
@@ -35,13 +36,18 @@ typedef struct
 }command_t;
 
 
+
 BaseType_t xHigherPrioritTaskWoken;
 
 
 /* STM32 Command Table */
 command_t const gCommandTable[DEVICE_COMMAND_TABLE_LEN] =
 {
-		{"STDEVICEID",NULL},
+		{"STDEVICEID",commandReadDeviceId},
+		{"BATTREAD",commandReadDeviceBattery},
+		{"GETTIME",commandGetTime},
+		{"GETDATE",commandGetDate},
+		 {NULL, commandInvalid },
 };
 
 
@@ -136,7 +142,7 @@ void CommandLineProcessCommand(char * buffer)
 		}
 	}
 	/* If the command was found, call the command function. Otherwise,
-	 * output an error message. */
+	 * output an error message.*/
 	if (CommandFound==false)
 	{
 		snprintf(TerminalMsgBuffer, sizeof(TerminalMsgBuffer), "ERROR,Command not found\n");

@@ -1,0 +1,15 @@
+ExtFlash.c:34:6:Flash__SpiWrite	1
+ExtFlash.c:46:15:Flash__SpiRead	1
+ExtFlash.c:59:6:Flash__GetManufacturerId	1
+ExtFlash.c:76:9:Flash__ReadDeviceStatus	1
+ExtFlash.c:89:9:Flash__ReadByte	1
+ExtFlash.c:107:6:Flash__ReadBuffer	2
+ExtFlash.c:125:6:flashWaitWhileBusy	2
+ExtFlash.c:145:6:Flash__PageProgram	3
+ExtFlash.c:176:6:Flash__SectorErase4k	1
+ExtFlash.c:193:6:Flash__BlockErase32k	1
+ExtFlash.c:210:6:Flash__BlockErase64k	1
+ExtFlash.c:226:6:Flash__ChipErase	1
+ExtFlash.c:238:6:Flash__PowerDown	1
+ExtFlash.c:248:6:Flash__WakeUp	1
+ExtFlash.c:258:13:flashSpiTransmitReceive	1

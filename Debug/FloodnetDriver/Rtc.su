@@ -1,0 +1,2 @@
+../FloodnetDriver/Rtc.c:20:6:RTC_TimeShow	48	static
+../FloodnetDriver/Rtc.c:36:6:RTC_DateShow	32	static

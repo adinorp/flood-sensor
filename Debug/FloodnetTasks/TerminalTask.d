@@ -61,7 +61,7 @@ FloodnetTasks/TerminalTask.o: ../FloodnetTasks/TerminalTask.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- ../FloodnetDriver/Uart.h
+ ../FloodnetDriver/DeviceCommands.h ../FloodnetDriver/Uart.h
 ../FloodnetTasks/TerminalTask.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:
@@ -125,4 +125,5 @@ FloodnetTasks/TerminalTask.o: ../FloodnetTasks/TerminalTask.c \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+../FloodnetDriver/DeviceCommands.h:
 ../FloodnetDriver/Uart.h:

@@ -1,0 +1,5 @@
+DeviceCommands.c:16:6:commandReadDeviceId	3
+DeviceCommands.c:41:6:commandReadDeviceBattery	1
+DeviceCommands.c:50:6:commandInvalid	1
+DeviceCommands.c:56:6:commandGetTime	1
+DeviceCommands.c:64:6:commandGetDate	1

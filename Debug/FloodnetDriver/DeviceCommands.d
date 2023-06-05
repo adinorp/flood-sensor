@@ -1,5 +1,5 @@
-FloodnetDriver/ExtFlash.o: ../FloodnetDriver/ExtFlash.c \
- ../FloodnetDriver/ExtFlash.h ../FloodnetDriver/Spi.h ../Core/Inc/main.h \
+FloodnetDriver/DeviceCommands.o: ../FloodnetDriver/DeviceCommands.c \
+ ../FloodnetDriver/DeviceCommands.h ../Core/Inc/main.h \
  ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h \
  ../Core/Inc/stm32wlxx_hal_conf.h \
  ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_dma.h \
@@ -60,9 +60,9 @@ FloodnetDriver/ExtFlash.o: ../FloodnetDriver/ExtFlash.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
- ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
-../FloodnetDriver/ExtFlash.h:
-../FloodnetDriver/Spi.h:
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
+ ../FloodnetDriver/Uart.h ../FloodnetDriver/Adc.h ../FloodnetDriver/Rtc.h
+../FloodnetDriver/DeviceCommands.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:
 ../Core/Inc/stm32wlxx_hal_conf.h:
@@ -125,3 +125,6 @@ FloodnetDriver/ExtFlash.o: ../FloodnetDriver/ExtFlash.c \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+../FloodnetDriver/Uart.h:
+../FloodnetDriver/Adc.h:
+../FloodnetDriver/Rtc.h:

@@ -1,2 +1,2 @@
-Adc.c:20:14:ReadADCChannel	3
-Adc.c:42:7:AdcRead_VBatt	1
+Adc.c:20:17:ReadADCChannel	3
+Adc.c:39:10:AdcRead_VBatt	1

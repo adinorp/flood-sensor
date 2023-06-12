@@ -1,2 +1,2 @@
-../FloodnetDriver/Adc.c:20:14:ReadADCChannel	24	static
-../FloodnetDriver/Adc.c:42:7:AdcRead_VBatt	8	static
+../FloodnetDriver/Adc.c:20:17:ReadADCChannel	24	static
+../FloodnetDriver/Adc.c:39:10:AdcRead_VBatt	8	static

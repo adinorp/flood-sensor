@@ -14,6 +14,7 @@
 
 char cValuetoPost;
 uint8_t uartData[1];
+uint8_t uartSonic[1];
 
 
 #define QUEUE_TIMEOUT 10
@@ -67,6 +68,8 @@ void terminalTaskHandler(void const * argument)
 	int tCommandReady = 0;
 	char tRxedChar;
 	HAL_UART_Receive_IT(Get_DebugHandle(),(uint8_t*)uartData,UART_RECEIVE_SIZE);
+	//HAL_UART_Receive_IT(Get_SonarHandle(),(uint8_t*)uartSonic,UART_RECEIVE_SIZE);
+
 	/* Infinite loop */
 	serialPutStr("Terminal Thread Initialized");
 	for(;;)
@@ -160,6 +163,13 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 		cValuetoPost = (char)uartData[0];
 		xQueueSendToBackFromISR(Get_TerminalQueueHandle(),(void*)&cValuetoPost,&xHigherPrioritTaskWoken);
 	}
+	if(huart->Instance==LPUART1)
+	{
+		HAL_UART_Receive_IT(Get_SonarHandle(),(uint8_t*)uartSonic,UART_RECEIVE_SIZE);
+		//cValuetoPost = (char)uartData[0];
+		//xQueueSendToBackFromISR(Get_TerminalQueueHandle(),(void*)&cValuetoPost,&xHigherPrioritTaskWoken);
+	}
+	//HAL_UART_Receive_IT(Get_SonarHandle(),(uint8_t*)uartSonic,UART_RECEIVE_SIZE);
 }
 
 

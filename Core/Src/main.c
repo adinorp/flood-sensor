@@ -668,6 +668,7 @@ osMessageQId Get_TerminalQueueHandle(void)
 /* USER CODE END 4 */
 
 
+
 /**
   * @brief  Period elapsed callback in non blocking mode
   * @note   This function is called  when TIM1 interrupt took place, inside

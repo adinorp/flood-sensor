@@ -42,7 +42,7 @@ void commandReadDeviceBattery(char *data)
 {
 
 	 serialPutStr("OK,BATTREAD");
-	 sprintf(DataBuffer,"OK,BATTREAD %d",AdcRead_VBatt());
+	 sprintf(DataBuffer,"OK,BATTREAD %f",AdcRead_VBatt());
 	 serialPutStr(DataBuffer);
 }
 

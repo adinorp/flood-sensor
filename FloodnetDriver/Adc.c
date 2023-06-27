@@ -6,38 +6,45 @@
  */
 
 #include "Adc.h"
-
+#include <stdio.h>
 
 //Get_AdcHandle
+float adcResult;
 
-const float convFacto = 3.300;
-uint16_t rawValue = 0;
-float adcResult = 0.0;
 #define CONVERSION_POLL_TIME 10
 
 static uint16_t ReadADCChannel(uint32_t Channel);
 
 static uint16_t ReadADCChannel(uint32_t Channel)
 {
-	uint16_t result = 0.00;
-	HAL_GPIO_WritePin(GPIOB, ADC_SW_Pin, GPIO_PIN_RESET);
+	uint16_t result;
 	if (HAL_ADCEx_Calibration_Start(Get_AdcHandle()) != HAL_OK) {
 	    Error_Handler();
 	  }
-	HAL_ADC_Start(Get_AdcHandle());
+	ADC_ChannelConfTypeDef sConfig = {0};
+	sConfig.Channel = Channel;
+	sConfig.Rank = ADC_REGULAR_RANK_1;
+	sConfig.SamplingTime = ADC_SAMPLINGTIME_COMMON_1;
+	if (HAL_ADC_ConfigChannel(Get_AdcHandle(), &sConfig) != HAL_OK) {
+		Error_Handler();
+	}
+	if (HAL_ADC_Start(Get_AdcHandle()) != HAL_OK) {
+		Error_Handler();
+	}
 	HAL_ADC_PollForConversion(Get_AdcHandle(), HAL_MAX_DELAY);
-
+	HAL_ADC_Stop(Get_AdcHandle());
 	if((HAL_ADC_GetState(Get_AdcHandle()) & HAL_ADC_STATE_EOC_REG) == HAL_ADC_STATE_EOC_REG)
 	{
 		/*##-5- Get the converted value of regular channel  ######################*/
-		rawValue = HAL_ADC_GetValue(Get_AdcHandle());
+		result = (uint16_t)HAL_ADC_GetValue(Get_AdcHandle());
 	}
 	return result;
 }
 
 
-uint16_t AdcRead_VBatt(void)
+float AdcRead_VBatt(void)
 {
-	adcResult = ReadADCChannel(ADC_CHANNEL_2);
+	HAL_GPIO_WritePin(GPIOB, ADC_SW_Pin, GPIO_PIN_RESET);
+	adcResult = (ReadADCChannel(ADC_CHANNEL_2) * 3.3 * 23) / (4096 * 13);
 	return adcResult;
 }

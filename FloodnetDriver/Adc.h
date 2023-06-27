@@ -10,7 +10,7 @@
 #include "main.h"
 
 
-uint16_t AdcRead_VBatt(void);
+float AdcRead_VBatt(void);
 
 
 

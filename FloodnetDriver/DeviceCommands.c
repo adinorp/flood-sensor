@@ -9,6 +9,7 @@
 #include "Uart.h"
 #include "Adc.h"
 #include "Rtc.h"
+#include "Maxbotix.h"
 
 
 char DataBuffer[200];
@@ -42,7 +43,7 @@ void commandReadDeviceBattery(char *data)
 {
 
 	 serialPutStr("OK,BATTREAD");
-	 sprintf(DataBuffer,"OK,BATTREAD %f",AdcRead_VBatt());
+	 sprintf(DataBuffer,"OK,BATTREAD %d",AdcRead_VBatt());
 	 serialPutStr(DataBuffer);
 }
 
@@ -65,4 +66,12 @@ void commandGetDate(char *data)
 	RTC_DateShow(dateTime);
     serialPutStr("OK,GETDATE\n");
     serialPutStr(dateTime);
+}
+
+char sonarBuffer[100];
+void commandGetDistance(char *data)
+{
+	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET);
+	sprintf(sonarBuffer,"OK,DISTREAD %d",getSonarDistance());
+	serialPutStr(sonarBuffer);
 }

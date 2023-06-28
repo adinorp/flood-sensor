@@ -42,9 +42,9 @@ static uint16_t ReadADCChannel(uint32_t Channel)
 }
 
 
-float AdcRead_VBatt(void)
+uint16_t AdcRead_VBatt(void)
 {
 	HAL_GPIO_WritePin(GPIOB, ADC_SW_Pin, GPIO_PIN_RESET);
-	adcResult = (ReadADCChannel(ADC_CHANNEL_2) * 3.3 * 23) / (4096 * 13);
+	adcResult = ReadADCChannel(ADC_CHANNEL_2); // * 3.3 * 23) / (4096 * 13);
 	return adcResult;
 }

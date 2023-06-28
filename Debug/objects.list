@@ -38,6 +38,7 @@
 "./FloodnetDriver/ExtFlash.o"
 "./FloodnetDriver/Gpio.o"
 "./FloodnetDriver/I2c.o"
+"./FloodnetDriver/Maxbotix.o"
 "./FloodnetDriver/Rtc.o"
 "./FloodnetDriver/Spi.o"
 "./FloodnetDriver/Uart.o"

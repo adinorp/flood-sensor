@@ -16,5 +16,6 @@ void commandReadDeviceBattery(char *data);
 void commandInvalid(char *data);
 void commandGetTime(char *data);
 void commandGetDate(char *data);
+void commandGetDistance(char *data);
 
 #endif /* DEVICECOMMANDS_H_ */

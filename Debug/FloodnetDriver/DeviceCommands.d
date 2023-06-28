@@ -61,7 +61,8 @@ FloodnetDriver/DeviceCommands.o: ../FloodnetDriver/DeviceCommands.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- ../FloodnetDriver/Uart.h ../FloodnetDriver/Adc.h ../FloodnetDriver/Rtc.h
+ ../FloodnetDriver/Uart.h ../FloodnetDriver/Adc.h ../FloodnetDriver/Rtc.h \
+ ../FloodnetDriver/Maxbotix.h
 ../FloodnetDriver/DeviceCommands.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:
@@ -128,3 +129,4 @@ FloodnetDriver/DeviceCommands.o: ../FloodnetDriver/DeviceCommands.c \
 ../FloodnetDriver/Uart.h:
 ../FloodnetDriver/Adc.h:
 ../FloodnetDriver/Rtc.h:
+../FloodnetDriver/Maxbotix.h:

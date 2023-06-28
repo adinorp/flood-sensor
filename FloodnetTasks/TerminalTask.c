@@ -48,6 +48,7 @@ command_t const gCommandTable[DEVICE_COMMAND_TABLE_LEN] =
 		{"BATTREAD",commandReadDeviceBattery},
 		{"GETTIME",commandGetTime},
 		{"GETDATE",commandGetDate},
+		{"GETDISTANCE",commandGetDistance},
 		 {NULL, commandInvalid },
 };
 

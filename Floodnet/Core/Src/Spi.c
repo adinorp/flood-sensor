@@ -7,6 +7,17 @@
 
 #include "Spi.h"
 
+void Spi1_AssertCs(void)
+{
+	//Assert SPI1_NSS pin
+	HAL_GPIO_WritePin(FLASH_CS_GPIO_Port, FLASH_CS_Pin, GPIO_PIN_SET);
+}
+
+void Spi1_DeassertCs(void)
+{
+	//Deassert SPI1_NSS pin
+	HAL_GPIO_WritePin(FLASH_CS_GPIO_Port, FLASH_CS_Pin, GPIO_PIN_RESET);
+}
 
 bool Spi1_Transmit(uint8_t *buff, uint16_t size)
 {

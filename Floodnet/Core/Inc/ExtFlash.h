@@ -47,6 +47,10 @@
 #define DUMMY                   0xff // Dummy byte which can be changed to any value
 
 
+#define STATUS_REG_BUSY	0x0001
+#define STATUS_REG_SUS	0x1000
+
+
 // Read Status Register
 // bit 0 BUSY 1=Write in progress
 // bit 1 WEL  1=Write Enabled
@@ -57,12 +61,15 @@
 // bit 6 SEC  1=Security ID space locked
 // bit 7 BPL  1=BP0..BP3 are read-only, 0=r/w
 
+bool Flash__Init(void);
 void Flash__SpiWrite (unsigned char data);
 unsigned char Flash__SpiRead (void);
-void Flash__GetManufacturerId(uint8_t rx_buffer[]);
+void Flash__GetJEDEC_ID(uint32_t *jdecId);
 void Flash__WriteEnable(void);
 void Flash__WriteDisable(void);
-uint8_t Flash__ReadDeviceStatus(void);
+uint16_t Flash__ReadDeviceStatus(void);
+uint8_t Flash__ReadDeviceStatus1(void);
+uint8_t Flash__ReadDeviceStatus2(void);
 uint8_t Flash__ReadByte(uint32_t addr);
 bool Flash__ReadBuffer(uint32_t addr, uint8_t* pBuffer, uint32_t length);
 void Flash__PageProgram(uint32_t addr, uint8_t* write_buffer, uint16_t len);

@@ -24,6 +24,7 @@
 /* USER CODE BEGIN Includes */
 #include "DeviceCommands.h"
 #include "Uart.h"
+#include "ExtFlash.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -113,6 +114,7 @@ int main(void)
   MX_I2C2_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
+  Flash__Init() ? serialPutStrNoMutex("Flash Test OK\n") : serialPutStrNoMutex("Flash FAIL Test \n");
 
   /* Create the mutex(es) */
   /* definition and creation of UartMutex */

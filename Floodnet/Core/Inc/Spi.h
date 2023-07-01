@@ -17,6 +17,9 @@
 #define SPI_DATA_0      0
 #define SPI_DATA_1      1
 
+void Spi1_AssertCs(void);
+void Spi1_DeassertCs(void);
+
 bool Spi1_Transmit(uint8_t *buff, uint16_t size);
 bool Spi1_Receive(uint8_t *buff, uint16_t size);
 bool Spi1_TransmitReceive(uint8_t *pTxData, uint8_t *pRxData, uint16_t Size);

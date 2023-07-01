@@ -61,7 +61,9 @@ Core/Src/main.o: ../Core/Src/main.c \
  C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/DeviceCommands.h \
  C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/main.h \
- C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/Uart.h
+ C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/Uart.h \
+ C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/ExtFlash.h \
+ C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/Spi.h
 C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/main.h:
 C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:
 C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/stm32wlxx_hal_conf.h:
@@ -125,3 +127,5 @@ C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Middlewares/Third
 C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/DeviceCommands.h:
 C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/main.h:
 C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/Uart.h:
+C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/ExtFlash.h:
+C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Core/Inc/Spi.h:

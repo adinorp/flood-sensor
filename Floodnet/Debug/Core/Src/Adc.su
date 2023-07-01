@@ -1,0 +1,2 @@
+../Core/Src/Adc.c:19:17:ReadADCChannel	32	static
+../Core/Src/Adc.c:46:10:AdcRead_VBatt	8	static

@@ -1,0 +1,15 @@
+../Core/Src/ExtFlash.c:34:6:Flash__SpiWrite	16	static
+../Core/Src/ExtFlash.c:46:15:Flash__SpiRead	16	static
+../Core/Src/ExtFlash.c:59:6:Flash__GetManufacturerId	24	static
+../Core/Src/ExtFlash.c:76:9:Flash__ReadDeviceStatus	16	static
+../Core/Src/ExtFlash.c:89:9:Flash__ReadByte	24	static
+../Core/Src/ExtFlash.c:107:6:Flash__ReadBuffer	40	static
+../Core/Src/ExtFlash.c:125:6:flashWaitWhileBusy	16	static
+../Core/Src/ExtFlash.c:145:6:Flash__PageProgram	24	static
+../Core/Src/ExtFlash.c:176:6:Flash__SectorErase4k	16	static
+../Core/Src/ExtFlash.c:193:6:Flash__BlockErase32k	16	static
+../Core/Src/ExtFlash.c:210:6:Flash__BlockErase64k	16	static
+../Core/Src/ExtFlash.c:226:6:Flash__ChipErase	8	static
+../Core/Src/ExtFlash.c:238:6:Flash__PowerDown	8	static
+../Core/Src/ExtFlash.c:248:6:Flash__WakeUp	8	static
+../Core/Src/ExtFlash.c:258:13:flashSpiTransmitReceive	24	static

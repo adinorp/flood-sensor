@@ -1,0 +1,6 @@
+../Core/Src/DeviceCommands.c:16:6:commandReadDeviceId	96	static
+../Core/Src/DeviceCommands.c:41:6:commandReadDeviceBattery	16	static
+../Core/Src/DeviceCommands.c:49:6:commandInvalid	16	static
+../Core/Src/DeviceCommands.c:55:6:commandGetTime	16	static
+../Core/Src/DeviceCommands.c:61:6:commandGetDate	16	static
+../Core/Src/DeviceCommands.c:67:6:commandGetDistance	16	static

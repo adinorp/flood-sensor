@@ -1,0 +1,2 @@
+../Core/Src/Uart.c:11:6:serialPutStr	24	static
+../Core/Src/Uart.c:21:6:serialPutStrNoMutex	24	static

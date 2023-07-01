@@ -71,6 +71,9 @@ void terminalTaskHandler(void const * argument)
 	HAL_UART_Receive_IT(Get_DebugHandle(),(uint8_t*)uartData,UART_RECEIVE_SIZE);
 	//HAL_UART_Receive_IT(Get_SonarHandle(),(uint8_t*)uartSonic,UART_RECEIVE_SIZE);
 
+
+
+
 	/* Infinite loop */
 	serialPutStr("Terminal Thread Initialized");
 	for(;;)

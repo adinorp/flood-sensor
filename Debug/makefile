@@ -66,8 +66,8 @@ all: main-build
 main-build: lora-e5.elf secondary-outputs
 
 # Tool invocations
-lora-e5.elf lora-e5.map: $(OBJS) $(USER_OBJS) /Users/psc368/Documents/GitHub/adinorp/flood-sensor/STM32WLE5JCIX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "lora-e5.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/psc368/Documents/GitHub/adinorp/flood-sensor/STM32WLE5JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lora-e5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+lora-e5.elf lora-e5.map: $(OBJS) $(USER_OBJS) C:\Users\adino\OneDrive\Documents\GitHub\flood-sensor\STM32WLE5JCIX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "lora-e5.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\adino\OneDrive\Documents\GitHub\flood-sensor\STM32WLE5JCIX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lora-e5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

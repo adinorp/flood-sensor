@@ -16,8 +16,8 @@ uint16_t getSonarDistance(void){
 	  uint8_t tries = 0;
 	  do {
 	    HAL_GPIO_WritePin(MB_CTL_GPIO_Port, MB_CTL_Pin, GPIO_PIN_SET);
-	    HAL_Delay(1); // todo: implement HAL_Delay_Microseconds()
-	    HAL_GPIO_WritePin(MB_CTL_GPIO_Port, MB_CTL_Pin, GPIO_PIN_RESET);
+	    //HAL_Delay(1); // todo: implement HAL_Delay_Microseconds()
+	    //HAL_GPIO_WritePin(MB_CTL_GPIO_Port, MB_CTL_Pin, GPIO_PIN_RESET);
 	    if (HAL_UART_Receive(Get_SonarHandle(), (uint8_t *)&rx, 1, 20) == HAL_OK) {
 	      if ((char)rx == 'R') {
 	        if (HAL_UART_Receive(Get_SonarHandle(), (uint8_t *)&RxBuffer, 4, 20) == HAL_OK) {

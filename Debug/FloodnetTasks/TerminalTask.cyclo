@@ -1,4 +1,4 @@
 TerminalTask.c:66:6:terminalTaskHandler	3
-TerminalTask.c:95:5:CommandLineBuildCommand	8
-TerminalTask.c:128:6:CommandLineProcessCommand	4
-TerminalTask.c:158:6:HAL_UART_RxCpltCallback	3
+TerminalTask.c:98:5:CommandLineBuildCommand	8
+TerminalTask.c:131:6:CommandLineProcessCommand	4
+TerminalTask.c:161:6:HAL_UART_RxCpltCallback	3

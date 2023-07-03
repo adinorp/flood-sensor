@@ -1,20 +1,13 @@
 /*
  * TerminalTask.h
  *
- *  Created on: May 7, 2023
+ *  Created on: Jul 1, 2023
  *      Author: adinor
  */
 
-#ifndef TERMINALTASK_H_
-#define TERMINALTASK_H_
+#ifndef TASKS_TERMINALTASK_H_
+#define TASKS_TERMINALTASK_H_
 
+void Task_Terminal(void);
 
-#include "main.h"
-#include "cmsis_os.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include <string.h>
-
-#define TERMINAL_MSG_BUFFER 100
-
-#endif /* TERMINALTASK_H_ */
+#endif /* TASKS_TERMINALTASK_H_ */

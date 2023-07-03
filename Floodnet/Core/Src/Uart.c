@@ -10,17 +10,11 @@
 
 void serialPutStr(const char *data)
 {
-   //Get exclusive access
-  //osAcquireMutex(&uartMutex);
+
   HAL_UART_Transmit(Get_DebugHandle(),(uint8_t *)data, strlen(data),DEBUG_UART_TIMEOUT);
-  //osReleaseMutex(&uartMutex);
 
 }
 
 
-void serialPutStrNoMutex(const char *data)
-{
-  HAL_UART_Transmit(Get_DebugHandle(),(uint8_t *)data, strlen(data),DEBUG_UART_TIMEOUT);
-}
 
 

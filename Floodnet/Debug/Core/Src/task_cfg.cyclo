@@ -1,0 +1,2 @@
+task_cfg.c:32:9:Task_ConfigGet	1
+task_cfg.c:38:15:Task_NumTasksGet	1

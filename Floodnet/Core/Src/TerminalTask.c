@@ -1,27 +1,36 @@
 /*
  * TerminalTask.c
  *
- *  Created on: May 7, 2023
+ *  Created on: Jul 1, 2023
  *      Author: adinor
  */
 
 
-//#include "Uart_Driver.h"
-#include "TerminalTask.h"
+#include <TerminalTask.h>
+#include <stdbool.h>
+#include "main.h"
+#include "uart.h"
+#include "cbuf.h"
 #include "DeviceCommands.h"
-#include "Uart.h"
 
 
-char cValuetoPost;
-uint8_t uartData[1];
-uint8_t uartSonic[1];
+
+uint8_t testdata[1];
+unsigned char uartData[1];
+volatile static bool dataRdy=false;
+bool initStatus = false;
+
+/**
+ * Buffer used to receive data over the Uart channel.
+ */
+myQ RxDataBuffer;
 
 
-#define QUEUE_TIMEOUT 10
 #define RX_WORD_LENGTH 255
 #define MAX_COMMAND_LEN 120
 #define DEVICE_COMMAND_TABLE_LEN 200
 #define COMMAND_TABLE_LEN 35
+#define TERMINAL_MSG_BUFFER 100
 
 static char gCommandBuffer[MAX_COMMAND_LEN + 1];
 
@@ -37,10 +46,6 @@ typedef struct
 }command_t;
 
 
-
-BaseType_t xHigherPrioritTaskWoken;
-
-
 /* STM32 Command Table */
 command_t const gCommandTable[DEVICE_COMMAND_TABLE_LEN] =
 {
@@ -49,7 +54,7 @@ command_t const gCommandTable[DEVICE_COMMAND_TABLE_LEN] =
 		{"GETTIME",commandGetTime},
 		{"GETDATE",commandGetDate},
 		{"GETDISTANCE",commandGetDistance},
-		 {NULL, commandInvalid },
+		{NULL, commandInvalid },
 };
 
 
@@ -61,37 +66,6 @@ int CommandLineBuildCommand(char nextChar);
 void CommandLineProcessCommand(char * buffer);
 
 
-
-/* USER CODE END Header_terminalTaskHandler */
-void terminalTaskHandler(void const * argument)
-{
-	/* USER CODE BEGIN 5 */
-	int tCommandReady = 0;
-	char tRxedChar;
-	HAL_UART_Receive_IT(Get_DebugHandle(),(uint8_t*)uartData,UART_RECEIVE_SIZE);
-	//HAL_UART_Receive_IT(Get_SonarHandle(),(uint8_t*)uartSonic,UART_RECEIVE_SIZE);
-
-
-
-
-	/* Infinite loop */
-	serialPutStr("Terminal Thread Initialized");
-	for(;;)
-	{
-		/* Process Terminal Commands */
-		if(xQueueReceive(Get_TerminalQueueHandle(),&tRxedChar,QUEUE_TIMEOUT))
-		{
-			tCommandReady = CommandLineBuildCommand(tRxedChar);
-			if(tCommandReady)
-			{
-				CommandLineProcessCommand(gCommandBuffer);
-				tCommandReady = 0;
-			}
-		}
-		osDelay(1);
-	}
-	/* USER CODE END 5 */
-}
 
 
 static uint16_t commandBuilderIdx = 0;
@@ -158,26 +132,41 @@ void CommandLineProcessCommand(char * buffer)
 }
 
 
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
 
-	if(huart->Instance==USART2)
+void Task_Terminal(void)
+{
+	int tCommandReady = 0;
+	char ch;
+	if(!initStatus)
 	{
-		HAL_UART_Receive_IT(Get_DebugHandle(),(uint8_t*)uartData,UART_RECEIVE_SIZE);
-		cValuetoPost = (char)uartData[0];
-		xQueueSendToBackFromISR(Get_TerminalQueueHandle(),(void*)&cValuetoPost,&xHigherPrioritTaskWoken);
+		CBUF_Init(RxDataBuffer);
+		//HAL_UART_Receive_IT(Get_DebugHandle(),(uint8_t*)uartData,UART_DMA_RECEIVE_SIZE);
+		serialPutStr("Terminal Task Started\n");
+		initStatus = true;
 	}
-	if(huart->Instance==LPUART1)
+	if(dataRdy)
 	{
-		HAL_UART_Receive_IT(Get_SonarHandle(),(uint8_t*)uartSonic,UART_RECEIVE_SIZE);
-		//cValuetoPost = (char)uartData[0];
-		//xQueueSendToBackFromISR(Get_TerminalQueueHandle(),(void*)&cValuetoPost,&xHigherPrioritTaskWoken);
+		ch = CBUF_Pop(RxDataBuffer);
+		tCommandReady = CommandLineBuildCommand(ch);
+		if(tCommandReady)
+		{
+			CommandLineProcessCommand(gCommandBuffer);
+			tCommandReady = 0;
+		}
+		dataRdy = false;
 	}
-	//HAL_UART_Receive_IT(Get_SonarHandle(),(uint8_t*)uartSonic,UART_RECEIVE_SIZE);
 }
 
 
 
-
-
-
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	if(huart->Instance==USART2)
+	{
+		HAL_UART_Receive_IT(Get_DebugHandle(),(uint8_t*)uartData,UART_DMA_RECEIVE_SIZE);
+		//serialPutStr(data[0]);
+		//HAL_UART_Transmit(Get_DebugHandle(),(uint8_t *)uartData, 1,DEBUG_UART_TIMEOUT);
+		CBUF_Push(RxDataBuffer, uartData[0]);
+		dataRdy = true;
+	}
+}

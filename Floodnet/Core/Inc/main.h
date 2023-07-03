@@ -31,7 +31,6 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "cmsis_os.h"
 #include "math.h"
 #include <ctype.h>
 #include <string.h>
@@ -85,8 +84,8 @@ void Error_Handler(void);
 #define MOSI_GPIO_Port GPIOA
 #define MB_OC_Pin GPIO_PIN_5
 #define MB_OC_GPIO_Port GPIOB
-#define MB_PWR_Pin GPIO_PIN_0
-#define MB_PWR_GPIO_Port GPIOA
+//#define MB_PWR_Pin GPIO_PIN_0
+//#define MB_PWR_GPIO_Port GPIOA
 #define SCK_Pin GPIO_PIN_13
 #define SCK_GPIO_Port GPIOB
 #define LED_Pin GPIO_PIN_6
@@ -96,7 +95,7 @@ void Error_Handler(void);
 //#define MB_RX_Pin GPIO_PIN_1
 //#define MB_RX_GPIO_Port GPIOC
 //#define MB_CTL_Pin GPIO_PIN_0
-#define MB_CTL_GPIO_Port GPIOC
+//#define MB_CTL_GPIO_Port GPIOC
 #define UART_RX_Pin GPIO_PIN_3
 #define UART_RX_GPIO_Port GPIOA
 #define UART_TX_Pin GPIO_PIN_2
@@ -121,9 +120,7 @@ ADC_HandleTypeDef *Get_AdcHandle(void);
 UART_HandleTypeDef *Get_DebugHandle(void);
 UART_HandleTypeDef *Get_SonarHandle(void);
 SPI_HandleTypeDef   *Get_SpiHandle(void);
-osMutexId  Get_UartMutexHandle(void);
-osMutexId  Get_SpiMutexHandle(void);
-osMutexId  Get_I2cMutexHandle(void);
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

@@ -12,8 +12,9 @@
 #include <string.h>
 
 #define DEBUG_UART_TIMEOUT 10
+#define UART_DMA_RECEIVE_SIZE 1
 
 void serialPutStr(const char *data);
-void serialPutStrNoMutex(const char *data);
+
 
 #endif /* UART_H_ */

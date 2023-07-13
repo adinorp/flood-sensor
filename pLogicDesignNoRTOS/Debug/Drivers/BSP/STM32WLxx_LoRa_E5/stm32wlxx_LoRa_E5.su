@@ -1,0 +1,8 @@
+../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:449:22:LL_AHB2_GRP1_EnableClock	24	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5.c:105:10:BSP_GetVersion	4	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5.c:123:9:BSP_LED_Init	40	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5.c:152:9:BSP_LED_DeInit	16	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5.c:172:9:BSP_LED_On	16	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5.c:188:9:BSP_LED_Off	16	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5.c:204:9:BSP_LED_Toggle	16	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5.c:220:9:BSP_LED_GetState	16	static

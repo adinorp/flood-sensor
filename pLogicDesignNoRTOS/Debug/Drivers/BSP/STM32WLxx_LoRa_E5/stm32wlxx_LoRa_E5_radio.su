@@ -1,0 +1,9 @@
+../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:449:22:LL_AHB2_GRP1_EnableClock	24	static
+../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:489:22:LL_AHB2_GRP1_DisableClock	16	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5_radio.c:3:9:BSP_RADIO_Init	32	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5_radio.c:24:9:BSP_RADIO_DeInit	8	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5_radio.c:36:9:BSP_RADIO_ConfigRFSwitch	16	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5_radio.c:69:9:BSP_RADIO_GetTxConfig	4	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5_radio.c:71:9:BSP_RADIO_IsTCXO	4	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5_radio.c:73:9:BSP_RADIO_IsDCDC	4	static
+../Drivers/BSP/STM32WLxx_LoRa_E5/stm32wlxx_LoRa_E5_radio.c:76:1:BSP_RADIO_GetRFOMaxPowerConfig	24	static

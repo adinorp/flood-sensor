@@ -1,0 +1,4 @@
+DeviceCommands.c:17:6:commandReadDeviceId	3
+DeviceCommands.c:41:6:commandReadDeviceBattery	1
+DeviceCommands.c:51:6:commandGetDistance	1
+DeviceCommands.c:58:6:commandInvalid	1

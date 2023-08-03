@@ -1,0 +1,5 @@
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/pkix/x509_common.c:141:8:x509IsSignAlgoSupported	24	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/pkix/x509_common.c:209:8:x509IsHashAlgoSupported	24	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/pkix/x509_common.c:308:9:x509GetSignHashAlgo	40	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/pkix/x509_common.c:750:13:x509GetPublicKeyType	24	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/pkix/x509_common.c:831:20:x509GetCurveInfo	24	static

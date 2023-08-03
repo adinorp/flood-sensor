@@ -1,0 +1,7 @@
+w25q80dv_flash_driver.c:86:9:w25q80dvFlashDriverInit	2
+w25q80dv_flash_driver.c:111:9:w25q80dvFlashDriverGetInfo	1
+w25q80dv_flash_driver.c:127:9:w25q80dvFlashDriverGetStatus	3
+w25q80dv_flash_driver.c:164:9:w25q80dvFlashDriverWrite	8
+w25q80dv_flash_driver.c:230:9:w25q80dvFlashDriverRead	4
+w25q80dv_flash_driver.c:261:9:w25q80dvFlashDriverErase	5
+w25q80dv_flash_driver.c:305:8:w25q80dvFlashDriverIsSectorAddr	2

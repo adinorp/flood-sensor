@@ -1,0 +1,7 @@
+iap_process.c:45:9:iapProcessInputImage	7
+iap_process.c:223:9:iapProcessOutputImageSingleBank	14
+iap_process.c:473:9:iapProcessOutputImage	1
+iap_process.c:491:9:iapProcessAppHeader	9
+iap_process.c:610:9:iapProcessAppCipherIv	1
+iap_process.c:673:9:iapProcessAppData	10
+iap_process.c:792:9:iapProcessAppCheck	4

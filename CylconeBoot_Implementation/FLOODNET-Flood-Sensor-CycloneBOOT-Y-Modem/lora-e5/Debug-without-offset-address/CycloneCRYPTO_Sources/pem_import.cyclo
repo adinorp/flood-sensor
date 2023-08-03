@@ -1,0 +1,17 @@
+pem_import.c:48:9:pemImportCertificate	4
+pem_import.c:79:9:pemImportCrl	4
+pem_import.c:108:9:pemImportCsr	4
+pem_import.c:136:9:pemImportDhParameters	10
+pem_import.c:246:9:pemImportRsaPublicKey	13
+pem_import.c:370:9:pemImportRsaPrivateKey	13
+pem_import.c:494:9:pemImportDsaPublicKey	9
+pem_import.c:573:9:pemImportDsaPrivateKey	13
+pem_import.c:697:9:pemImportEcParameters	21
+pem_import.c:892:9:pemImportEcPublicKey	9
+pem_import.c:971:9:pemImportEcPrivateKey	13
+pem_import.c:1095:9:pemImportEddsaPublicKey	1
+pem_import.c:1174:9:pemImportEddsaPrivateKey	1
+pem_import.c:1252:9:pemGetPublicKeyType	10
+pem_import.c:1344:9:pemGetPrivateKeyType	12
+pem_import.c:1456:9:pemDecodeFile	8
+pem_import.c:1522:7:pemFindTag	9

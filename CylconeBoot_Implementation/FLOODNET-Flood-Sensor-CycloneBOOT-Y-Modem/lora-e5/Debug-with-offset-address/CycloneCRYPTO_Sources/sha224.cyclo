@@ -1,0 +1,4 @@
+sha224.c:64:21:sha224Compute	2
+sha224.c:104:18:sha224Init	1
+sha224.c:130:18:sha224Update	1
+sha224.c:143:18:sha224Final	2

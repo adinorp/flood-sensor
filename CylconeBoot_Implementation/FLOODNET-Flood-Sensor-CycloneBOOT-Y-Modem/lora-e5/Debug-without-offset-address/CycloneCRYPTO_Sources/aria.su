@@ -1,0 +1,6 @@
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/cipher/aria.c:246:13:OF	48	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/cipher/aria.c:265:13:EF	48	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/cipher/aria.c:286:9:ariaInit	128	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/cipher/aria.c:434:6:ariaEncryptBlock	88	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/cipher/aria.c:500:6:ariaDecryptBlock	88	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/cipher/aria.c:564:6:ariaDeinit	16	static

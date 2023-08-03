@@ -1,0 +1,4 @@
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/cipher/camellia.c:290:9:camelliaInit	64	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/cipher/camellia.c:425:6:camelliaEncryptBlock	56	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/cipher/camellia.c:493:6:camelliaDecryptBlock	56	static
+C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_crypto/cipher/camellia.c:559:6:camelliaDeinit	16	static

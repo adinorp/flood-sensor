@@ -1,0 +1,11 @@
+stm32wlxx_flash_driver.c:113:9:stm32wlxxFlashDriverInit	1
+stm32wlxx_flash_driver.c:134:9:stm32wlxxFlashDriverGetInfo	1
+stm32wlxx_flash_driver.c:150:9:stm32wlxxFlashDriverGetStatus	4
+stm32wlxx_flash_driver.c:197:9:stm32wlxxFlashDriverWrite	9
+stm32wlxx_flash_driver.c:267:9:stm32wlxxFlashDriverRead	6
+stm32wlxx_flash_driver.c:300:9:stm32wlxxFlashDriverErase	9
+stm32wlxx_flash_driver.c:358:9:stm32wlxxFlashDriverGetNextSector	9
+stm32wlxx_flash_driver.c:409:8:stm32wlxxFlashDriverIsSectorAddr	2
+stm32wlxx_flash_driver.c:436:9:stm32wlxxFlashDriverEraseSector	9
+stm32wlxx_flash_driver.c:504:9:stm32wlxxFlashDriverWriteWord	6
+stm32wlxx_flash_driver.c:581:7:stm32wlxxFlashGetSector	4

@@ -1,0 +1,2 @@
+system_stm32wlxx.c:227:6:SystemInit	1
+system_stm32wlxx.c:282:6:SystemCoreClockUpdate	8

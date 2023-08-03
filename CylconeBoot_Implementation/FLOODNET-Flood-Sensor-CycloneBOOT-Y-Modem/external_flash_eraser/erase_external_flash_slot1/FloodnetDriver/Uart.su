@@ -1,0 +1,2 @@
+../FloodnetDriver/Uart.c:11:6:serialPutStr	16	static
+../FloodnetDriver/Uart.c:21:6:serialPutStrNoMutex	16	static

@@ -1,0 +1,2 @@
+x509_crl_validate.c:42:9:x509ValidateCrl	9
+x509_crl_validate.c:121:9:x509CheckRevokedCertificate	13

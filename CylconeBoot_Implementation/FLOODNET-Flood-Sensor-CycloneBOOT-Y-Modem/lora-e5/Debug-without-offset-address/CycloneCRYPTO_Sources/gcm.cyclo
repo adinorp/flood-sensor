@@ -1,0 +1,6 @@
+gcm.c:87:21:gcmInit	5
+gcm.c:198:21:gcmEncrypt	9
+gcm.c:345:21:gcmDecrypt	10
+gcm.c:492:18:gcmMul	2
+gcm.c:581:6:gcmXorBlock	2
+gcm.c:598:6:gcmIncCounter	1

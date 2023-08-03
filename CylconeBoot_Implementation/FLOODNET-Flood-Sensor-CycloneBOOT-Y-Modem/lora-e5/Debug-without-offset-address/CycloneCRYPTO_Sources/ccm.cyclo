@@ -1,0 +1,4 @@
+ccm.c:55:21:ccmEncrypt	17
+ccm.c:228:21:ccmDecrypt	18
+ccm.c:402:6:ccmXorBlock	2
+ccm.c:420:6:ccmIncCounter	2

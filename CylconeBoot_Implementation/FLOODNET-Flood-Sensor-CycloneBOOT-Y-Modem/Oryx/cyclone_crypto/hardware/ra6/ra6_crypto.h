@@ -1,0 +1,41 @@
+/**
+ * @file ra6_crypto.h
+ * @brief RA6 hardware cryptographic accelerator (SCE7 / SCE9)
+ *
+ * @section License
+ *
+ * Copyright (C) 2021-2023 Oryx Embedded SARL. All rights reserved.
+ *
+ * This file is part of CycloneBOOT Ultimate.
+ *
+ * This software is provided under a commercial license. You may
+ * use this software under the conditions stated in the license
+ * terms. This source code cannot be redistributed.
+ *
+ * @author Oryx Embedded SARL (www.oryx-embedded.com)
+ * @version 2.1.1
+ **/
+
+#ifndef _RA6_CRYPTO_H
+#define _RA6_CRYPTO_H
+
+//Dependencies
+#include "core/crypto.h"
+
+//C++ guard
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+//Global variables
+extern OsMutex ra6CryptoMutex;
+
+//RA6 hardware cryptographic accelerator related functions
+error_t ra6CryptoInit(void);
+
+//C++ guard
+#ifdef __cplusplus
+}
+#endif
+
+#endif

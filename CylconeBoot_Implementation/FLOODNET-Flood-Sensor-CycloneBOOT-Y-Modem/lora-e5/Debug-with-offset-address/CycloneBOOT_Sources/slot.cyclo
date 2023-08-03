@@ -1,0 +1,5 @@
+slot.c:34:8:isSlotsOverlap	5
+slot.c:51:8:isSlotInBank2	6
+slot.c:99:8:isSlotInExtMem	4
+slot.c:141:9:slotRead	7
+slot.c:179:9:slotErase	4

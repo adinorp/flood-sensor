@@ -1,0 +1,4 @@
+camellia.c:290:9:camelliaInit	15
+camellia.c:425:6:camelliaEncryptBlock	5
+camellia.c:493:6:camelliaDecryptBlock	6
+camellia.c:559:6:camelliaDeinit	1

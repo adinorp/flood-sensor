@@ -1,0 +1,5 @@
+ecdh.c:36:6:ecdhInit	1
+ecdh.c:53:6:ecdhFree	1
+ecdh.c:73:9:ecdhGenerateKeyPair	8
+ecdh.c:215:9:ecdhCheckPublicKey	18
+ecdh.c:328:9:ecdhComputeSharedSecret	12

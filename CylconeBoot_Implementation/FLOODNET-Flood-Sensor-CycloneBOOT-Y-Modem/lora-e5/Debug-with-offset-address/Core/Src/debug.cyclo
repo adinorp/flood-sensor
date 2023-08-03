@@ -1,0 +1,3 @@
+debug.c:43:6:debugInit	1
+debug.c:61:6:debugDisplayArray	5
+stdio.h:214:5:fputc	3

@@ -1,0 +1,6 @@
+aria.c:246:13:OF	1
+aria.c:265:13:EF	1
+aria.c:286:9:ariaInit	9
+aria.c:434:6:ariaEncryptBlock	3
+aria.c:500:6:ariaDecryptBlock	3
+aria.c:564:6:ariaDeinit	1

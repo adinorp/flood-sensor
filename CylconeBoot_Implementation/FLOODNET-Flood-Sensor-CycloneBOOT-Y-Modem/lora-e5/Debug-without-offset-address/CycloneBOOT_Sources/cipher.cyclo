@@ -1,0 +1,4 @@
+cipher.c:39:9:cipherInit	6
+cipher.c:82:9:cipherSetIv	4
+cipher.c:105:9:cipherEncryptData	7
+cipher.c:145:9:cipherDecryptData	7

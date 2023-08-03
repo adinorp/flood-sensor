@@ -1,0 +1,6 @@
+md5.c:97:21:md5Compute	2
+md5.c:137:18:md5Init	1
+md5.c:159:18:md5Update	3
+md5.c:198:18:md5Final	4
+md5.c:247:18:md5FinalRaw	3
+md5.c:273:18:md5ProcessBlock	2

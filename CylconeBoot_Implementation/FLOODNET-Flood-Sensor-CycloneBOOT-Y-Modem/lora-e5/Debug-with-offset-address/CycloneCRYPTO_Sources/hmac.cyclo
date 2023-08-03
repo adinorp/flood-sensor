@@ -1,0 +1,5 @@
+hmac.c:73:21:hmacCompute	3
+hmac.c:120:21:hmacInit	7
+hmac.c:181:18:hmacUpdate	1
+hmac.c:198:18:hmacFinal	3
+hmac.c:237:6:hmacFinalRaw	3

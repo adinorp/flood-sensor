@@ -1,0 +1,2 @@
+image.c:34:9:imageCheckHeader	5
+image.c:73:9:imageGetHeader	5

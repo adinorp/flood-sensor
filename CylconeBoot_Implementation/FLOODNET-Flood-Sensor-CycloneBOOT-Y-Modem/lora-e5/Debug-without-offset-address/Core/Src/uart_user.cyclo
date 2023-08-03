@@ -1,0 +1,6 @@
+stm32wlxx_ll_bus.h:449:22:LL_AHB2_GRP1_EnableClock	1
+stm32wlxx_ll_bus.h:914:22:LL_APB1_GRP1_EnableClock	1
+uart_user.c:64:6:uartUserDownload	8
+uart_user.c:218:15:Ymodem_Receive_UserCallback	2
+uart_user.c:240:6:uartUserInit	1
+uart_user.c:286:6:uartUserTaskHandler	6

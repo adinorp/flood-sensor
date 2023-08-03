@@ -1,0 +1,16 @@
+x509_signature.c:48:9:x509RegisterSignGenCallback	1
+x509_signature.c:68:9:x509RegisterSignVerifyCallback	1
+x509_signature.c:96:9:x509GenerateSignature	6
+x509_signature.c:217:9:x509GenerateRsaSignature	2
+x509_signature.c:259:9:x509GenerateRsaPssSignature	1
+x509_signature.c:301:9:x509GenerateDsaSignature	1
+x509_signature.c:357:9:x509GenerateEcdsaSignature	5
+x509_signature.c:435:9:x509GenerateEd25519Signature	1
+x509_signature.c:486:9:x509GenerateEd448Signature	1
+x509_signature.c:537:9:x509VerifySignature	5
+x509_signature.c:654:9:x509VerifyRsaSignature	6
+x509_signature.c:722:9:x509VerifyRsaPssSignature	1
+x509_signature.c:790:9:x509VerifyDsaSignature	1
+x509_signature.c:869:9:x509VerifyEcdsaSignature	6
+x509_signature.c:958:9:x509VerifyEd25519Signature	1
+x509_signature.c:1005:9:x509VerifyEd448Signature	1

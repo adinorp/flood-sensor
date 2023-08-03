@@ -1,0 +1,4 @@
+crc32.c:122:9:crc32Compute	2
+crc32.c:149:6:crc32Init	1
+crc32.c:163:6:crc32Update	2
+crc32.c:193:6:crc32Final	2

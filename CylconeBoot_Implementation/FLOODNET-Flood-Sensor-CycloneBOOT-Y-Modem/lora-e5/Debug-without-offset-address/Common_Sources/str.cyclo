@@ -1,0 +1,5 @@
+str.c:32:9:strDuplicate	3
+str.c:68:9:strTrimWhitespace	6
+str.c:107:6:strRemoveTrailingSpace	5
+str.c:134:6:strReplaceChar	3
+str.c:157:9:strSafeCopy	4

@@ -1,0 +1,6 @@
+iap_misc.c:45:9:iapInitPrimaryMemory	7
+iap_misc.c:131:9:iapInitSecondaryMemory	8
+iap_misc.c:225:9:iapInitInputImage	8
+iap_misc.c:364:9:iapInitOutputImage	4
+iap_misc.c:445:9:iapWrite	12
+iap_misc.c:567:9:iapGetImageHeaderFromSlot	5

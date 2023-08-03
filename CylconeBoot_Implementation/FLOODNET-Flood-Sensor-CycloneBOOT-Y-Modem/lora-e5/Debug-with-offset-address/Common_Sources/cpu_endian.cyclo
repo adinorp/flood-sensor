@@ -1,0 +1,8 @@
+cpu_endian.c:29:10:swapInt16	1
+cpu_endian.c:41:10:swapInt32	1
+cpu_endian.c:53:10:swapInt64	1
+cpu_endian.c:65:9:reverseInt4	1
+cpu_endian.c:80:9:reverseInt8	1
+cpu_endian.c:96:10:reverseInt16	1
+cpu_endian.c:113:10:reverseInt32	1
+cpu_endian.c:131:10:reverseInt64	1

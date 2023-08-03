@@ -1,0 +1,48 @@
+Compile / Generate :
+
+    Compile the “micro_bootloader” project.
+    Compile the “loa-e5” project.
+    Run "generate_lora_e5_iap_single_bank_internal_image.bat" to generate “internal” bootable image, which is the initial firmware image that will be installed in the internal flash.
+    Run “generate_lora_e5_iap_single_bank_update_images.bat” to generate update images to be installed subsequently (for all 3 scenarios).
+
+ 
+
+Load / Install :
+
+ 
+
+    Run “load_bootloader.bat” to load the micro bootloader to the beginning of the flash.
+    Run “"load_lora_e5_iap_single_bank_internal_image.bat" to load the “internal” image (Note: this script will also erase the external memory, so that we make sure we start from a clean state. This is done by loading a small program at the beginning of the internal flash, replacing the bootloader. It is important therefore to re-run “load_bootloader.bat” in the next step to restore the erased bootloader).
+    Run “load_bootloader.bat” script again to load the micro bootloader in the beginning of the internal flash.
+
+ 
+
+Run / Test
+
+    At this point, you can reset the board with a serial terminal connected to see the results in a console. Bootloader should start and load the “internal” image, or the initial firmware contained within a slot in the internal flash (slot at address 0x08008000 and has a size of 0x38000 bytes).
+    If the application boots, you should be presented with an update menu inviting you to perform a firmware update.
+
+ 
+
+*****************************
+*** Micro Bootloader Demo ***
+*****************************
+Copyright: 2010-2021 Oryx Embedded SARL
+Compiled: Jun 27 2023 23:58:32
+Target: STM32F769
+
+Selected slot:
+- address:  0x08008000
+- size:     0x00038000
+Checking current application image...
+Current application image is valid
+Booting to the application...
+
+=======================
+= Y-MODEM update menu =
+=======================
+Choices:
+  1 -> Download update image
+  2 -> Get current application version
+
+v1.0.0

@@ -1,0 +1,4 @@
+verify.c:39:9:verifyInit	7
+verify.c:119:9:verifyProcess	8
+verify.c:197:9:verifyConfirm	9
+verify.c:340:9:verifyGenerateCheckData	7

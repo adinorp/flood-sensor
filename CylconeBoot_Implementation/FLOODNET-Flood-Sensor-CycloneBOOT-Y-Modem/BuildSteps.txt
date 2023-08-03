@@ -39,6 +39,13 @@ Current application image is valid
 Booting to the application...
 
 =======================
+= Boot menu =
+=======================
+a- go to Y-modem menu
+b- go to main app
+
+
+=======================
 = Y-MODEM update menu =
 =======================
 Choices:

@@ -72,6 +72,7 @@ ADC_HandleTypeDef *Get_AdcHandle(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+
 #define ADC_SW_Pin GPIO_PIN_7
 #define ADC_SW_GPIO_Port GPIOB
 #define FLASH_CS_Pin GPIO_PIN_9
@@ -92,11 +93,14 @@ ADC_HandleTypeDef *Get_AdcHandle(void);
 #define MB_CTL_Pin GPIO_PIN_1	/* Manually swapped with PC0, different from .ioc configuration */
 #define MB_CTL_GPIO_Port GPIOC
 
+//#define W25Q80DV			/* 1 M-bit flash IC*/
+#define W25Q64JV			/* 8 M-bit flash IC*/
+
 //
 //Un-comment one of the following lines to select the application version
 //
-#define APP_DEMO_V1    //V1 version -> v1.0.0
-//#define APP_DEMO_V2    //V2 version -> v2.0.0
+//#define APP_DEMO_V1    //V1 version -> v1.0.0
+#define APP_DEMO_V2    //V2 version -> v2.0.0
 //#define APP_DEMO_V3    //V3 version -> v3.0.0
 
 //

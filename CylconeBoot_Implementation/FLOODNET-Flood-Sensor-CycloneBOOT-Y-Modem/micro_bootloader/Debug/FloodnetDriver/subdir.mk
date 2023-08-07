@@ -1,0 +1,36 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+# Toolchain: GNU Tools for STM32 (11.3.rel1)
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../FloodnetDriver/ExtFlash.c \
+../FloodnetDriver/Gpio.c \
+../FloodnetDriver/Spi.c \
+../FloodnetDriver/Uart.c 
+
+OBJS += \
+./FloodnetDriver/ExtFlash.o \
+./FloodnetDriver/Gpio.o \
+./FloodnetDriver/Spi.o \
+./FloodnetDriver/Uart.o 
+
+C_DEPS += \
+./FloodnetDriver/ExtFlash.d \
+./FloodnetDriver/Gpio.d \
+./FloodnetDriver/Spi.d \
+./FloodnetDriver/Uart.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+FloodnetDriver/%.o FloodnetDriver/%.su FloodnetDriver/%.cyclo: ../FloodnetDriver/%.c FloodnetDriver/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WLE5xx -DUSER_VECT_TAB_ADDRESS -DSTM32LxxxC -DFLASH_SINGLE_BANK -c -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/Core/Inc" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/Drivers/STM32WLxx_HAL_Driver/Inc" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/Drivers/STM32WLxx_HAL_Driver/Inc/Legacy" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/Drivers/CMSIS/Device/ST/STM32WLxx/Include" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/Drivers/CMSIS/Include" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/Middlewares/Third_Party/FreeRTOS/Source/include" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/FloodnetDriver" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/FloodnetTasks" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/../Oryx/common" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/../Oryx/cyclone_boot" -I"C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/micro_bootloader/../Oryx/cyclone_crypto" -O1 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
+
+clean: clean-FloodnetDriver
+
+clean-FloodnetDriver:
+	-$(RM) ./FloodnetDriver/ExtFlash.cyclo ./FloodnetDriver/ExtFlash.d ./FloodnetDriver/ExtFlash.o ./FloodnetDriver/ExtFlash.su ./FloodnetDriver/Gpio.cyclo ./FloodnetDriver/Gpio.d ./FloodnetDriver/Gpio.o ./FloodnetDriver/Gpio.su ./FloodnetDriver/Spi.cyclo ./FloodnetDriver/Spi.d ./FloodnetDriver/Spi.o ./FloodnetDriver/Spi.su ./FloodnetDriver/Uart.cyclo ./FloodnetDriver/Uart.d ./FloodnetDriver/Uart.o ./FloodnetDriver/Uart.su
+
+.PHONY: clean-FloodnetDriver
+

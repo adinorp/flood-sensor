@@ -7,6 +7,7 @@
  */
 
 #include "ExtFlash.h"
+#include "main.h"
 
 #define MAX_TIMEOUT 100
 #define SPI_DELAY 1
@@ -22,10 +23,19 @@
 
 #define WINBOND_JEDEC_MANUFACTURER_ID 	0xEF
 #define WINBOND_JEDEC_MEMORY_TYPE		0x40
+#if defined W25Q80DV
 #define WINBOND_JEDEC_CAPACITY			0x14
+#elif defined W25Q64JV
+#define WINBOND_JEDEC_CAPACITY			0x17
+#endif
+
 #define WINBOND_JEDEC_ID				((WINBOND_JEDEC_MANUFACTURER_ID << 16) | (WINBOND_JEDEC_MEMORY_TYPE << 8) | WINBOND_JEDEC_CAPACITY)
 
+#if defined W25Q80DV
 #define WINBOND_FLASH_SIZE             	0x100000  // 8 Mbits -> 1MB
+#elif defined W25Q64JV
+#define WINBOND_FLASH_SIZE             	0x800000  // 64 Mbits -> 8MB
+#endif
 
 //Power
 #define WINBOND_POWER_DOWN				0xB9	// put flash in deep power down mode

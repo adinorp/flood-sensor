@@ -1,7 +1,7 @@
 Compile / Generate :
 
     Compile the “micro_bootloader” project.
-    Compile the “loa-e5” project.
+    Compile the “loa-e5” project - debug with offset address.
     Run "generate_lora_e5_iap_single_bank_internal_image.bat" to generate “internal” bootable image, which is the initial firmware image that will be installed in the internal flash.
     Run “generate_lora_e5_iap_single_bank_update_images.bat” to generate update images to be installed subsequently (for all 3 scenarios).
 

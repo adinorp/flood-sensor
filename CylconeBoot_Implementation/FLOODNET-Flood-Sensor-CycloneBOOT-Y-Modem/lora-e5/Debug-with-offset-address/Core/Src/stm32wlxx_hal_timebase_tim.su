@@ -1,4 +1,4 @@
-C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:1303:22:LL_APB2_GRP1_EnableClock	24	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:1303:22:LL_APB2_GRP1_EnableClock	24	static
 ../Core/Src/stm32wlxx_hal_timebase_tim.c:41:19:HAL_InitTick	56	static
 ../Core/Src/stm32wlxx_hal_timebase_tim.c:109:6:HAL_SuspendTick	4	static
 ../Core/Src/stm32wlxx_hal_timebase_tim.c:121:6:HAL_ResumeTick	4	static

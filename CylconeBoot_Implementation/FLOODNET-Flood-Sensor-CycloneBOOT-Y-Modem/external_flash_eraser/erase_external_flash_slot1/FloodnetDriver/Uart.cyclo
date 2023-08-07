@@ -1,2 +1,0 @@
-Uart.c:11:6:serialPutStr	1
-Uart.c:21:6:serialPutStrNoMutex	1

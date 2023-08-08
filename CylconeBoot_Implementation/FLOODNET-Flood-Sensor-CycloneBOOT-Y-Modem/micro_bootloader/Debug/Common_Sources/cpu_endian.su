@@ -1,0 +1,8 @@
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/cpu_endian.c:29:10:swapInt16	0	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/cpu_endian.c:41:10:swapInt32	0	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/cpu_endian.c:53:10:swapInt64	0	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/cpu_endian.c:65:9:reverseInt4	0	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/cpu_endian.c:80:9:reverseInt8	0	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/cpu_endian.c:96:10:reverseInt16	0	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/cpu_endian.c:113:10:reverseInt32	0	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/cpu_endian.c:131:10:reverseInt64	4	static

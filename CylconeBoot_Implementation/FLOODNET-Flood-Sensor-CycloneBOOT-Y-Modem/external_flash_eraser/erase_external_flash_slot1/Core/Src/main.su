@@ -1,8 +1,0 @@
-../Core/Src/main.c:69:5:__io_putchar	16	static
-../Core/Src/main.c:168:6:SystemClock_Config	112	static,ignoring_inline_asm
-../Core/Src/main.c:87:5:main	88	static,ignoring_inline_asm
-../Core/Src/main.c:417:6:rTosDelay	0	static
-../Core/Src/main.c:421:21:Get_DebugHandle	0	static
-../Core/Src/main.c:425:20:Get_RtcHandle	0	static
-../Core/Src/main.c:429:20:Get_SpiHandle	0	static
-../Core/Src/main.c:439:6:Error_Handler	0	static,ignoring_inline_asm

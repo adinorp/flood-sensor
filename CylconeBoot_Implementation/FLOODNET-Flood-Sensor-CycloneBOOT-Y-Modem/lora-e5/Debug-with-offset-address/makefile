@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (10.3-2021.10)
+# Toolchain: GNU Tools for STM32 (11.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -73,8 +73,8 @@ all:
 main-build: lora-e5.elf secondary-outputs
 
 # Tool invocations
-lora-e5.elf lora-e5.map: $(OBJS) $(USER_OBJS) C:\Users\adino\Downloads\2023_06_23_P_LOGIC_CycloneBOOT_Implementation\FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem\lora-e5\STM32WLE5JCIX_FLASH_with_offset.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "lora-e5.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\adino\Downloads\2023_06_23_P_LOGIC_CycloneBOOT_Implementation\FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem\lora-e5\STM32WLE5JCIX_FLASH_with_offset.ld" --specs=nosys.specs -Wl,-Map="lora-e5.map" -Wl,--gc-sections -static  -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+lora-e5.elf lora-e5.map: $(OBJS) $(USER_OBJS) C:\Users\prane\OneDrive\Documents\GitHub\flood-sensor\CylconeBoot_Implementation\FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem\lora-e5\STM32WLE5JCIX_FLASH_with_offset.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "lora-e5.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\prane\OneDrive\Documents\GitHub\flood-sensor\CylconeBoot_Implementation\FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem\lora-e5\STM32WLE5JCIX_FLASH_with_offset.ld" --specs=nosys.specs -Wl,-Map="lora-e5.map" -Wl,--gc-sections -static  -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -99,11 +99,11 @@ clean:
 	-@echo ' '
 
 pre-build:
-	C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/../Oryx/utils/ResourceCompiler/bin/rc.exe C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/./resources/ C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/./Core/Src/res.c
+	C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/../Oryx/utils/ResourceCompiler/bin/rc.exe C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/./resources/ C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/./Core/Src/res.c
 	-@echo ' '
 
 post-build:
-	wscript.exe C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/scripts/misc/copyFile.js C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Debug-with-offset-address/lora-e5.bin C:/Users/adino/Downloads/2023_06_23_P_LOGIC_CycloneBOOT_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/lora-e5.bin
+	wscript.exe C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/scripts/misc/copyFile.js C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Debug-with-offset-address/lora-e5.bin C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/lora-e5.bin
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)

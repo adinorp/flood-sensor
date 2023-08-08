@@ -47,7 +47,8 @@ command_t const gCommandTable[DEVICE_COMMAND_TABLE_LEN] =
 	{"STDEVICEID",commandReadDeviceId},
 	{"BATTREAD",commandReadDeviceBattery},
 	{"GETDISTANCE",commandGetDistance},
-	{"VERSION",commandGetVersion}
+	{"VERSION",commandGetVersion},
+	{"REBOOT",commandReboot}
 
 
 };

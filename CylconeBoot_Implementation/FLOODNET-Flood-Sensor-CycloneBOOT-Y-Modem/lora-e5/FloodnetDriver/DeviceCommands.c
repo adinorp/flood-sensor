@@ -51,9 +51,10 @@ void commandReadDeviceBattery(char *data)
 char sonarBuffer[100];
 void commandGetDistance(char *data)
 {
-	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET); 		/* turn on */
 	sprintf(sonarBuffer,"OK,DISTREAD %d\n",getSonarDistance());
 	serialPutStr(sonarBuffer);
+//	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET);	/* turn off to save power */
 }
 
 void commandGetVersion(char *data)
@@ -63,11 +64,11 @@ void commandGetVersion(char *data)
 	serialPutStr(DataBuffer);
 }
 
+void commandReboot(char *data){
+	NVIC_SystemReset();
+}
+
 void commandInvalid(char *data)
 {
   serialPutStr("ERROR,Invalid Command Handler!\n");
 }
-
-
-
-

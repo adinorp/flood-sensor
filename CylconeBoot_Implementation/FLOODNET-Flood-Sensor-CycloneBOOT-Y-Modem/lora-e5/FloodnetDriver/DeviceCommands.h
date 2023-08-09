@@ -18,5 +18,6 @@ void commandGetTime(char *data);
 void commandGetDate(char *data);
 void commandGetDistance(char *data);
 void commandGetVersion(char *data);
+void commandReboot(char *data);
 
 #endif /* DEVICECOMMANDS_H_ */

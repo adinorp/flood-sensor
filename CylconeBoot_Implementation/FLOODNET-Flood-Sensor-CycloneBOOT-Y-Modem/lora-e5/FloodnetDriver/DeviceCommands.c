@@ -68,6 +68,11 @@ void commandReboot(char *data){
 	NVIC_SystemReset();
 }
 
+
+void commandSleep(char *data){
+	serialPutStr("Sleep called...\n");
+}
+
 void commandInvalid(char *data)
 {
   serialPutStr("ERROR,Invalid Command Handler!\n");

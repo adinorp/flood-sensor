@@ -48,7 +48,8 @@ command_t const gCommandTable[DEVICE_COMMAND_TABLE_LEN] =
 	{"BATTREAD",commandReadDeviceBattery},
 	{"GETDISTANCE",commandGetDistance},
 	{"VERSION",commandGetVersion},
-	{"REBOOT",commandReboot}
+	{"REBOOT",commandReboot},
+	{"SLEEP",commandSleep}
 
 
 };

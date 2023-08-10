@@ -6,6 +6,7 @@
  */
 
 #include "Maxbotix.h"
+#include "Uart.h"
 
 volatile uint16_t readings_arr[30] = { 0 };
 size_t arr_len = sizeof(readings_arr) / sizeof(readings_arr[0]);
@@ -33,7 +34,7 @@ static uint16_t singleRead(void) {
 				== HAL_OK) {
 			if ((char) rx == 'R') {
 				if (HAL_UART_Receive(Get_SonarHandle(), (uint8_t*) &RxBuffer, 4,
-						150) == HAL_OK) {
+						20) == HAL_OK) {
 					if (isdigit(RxBuffer[3])) {
 						newData = true;
 					}
@@ -51,17 +52,17 @@ static uint16_t singleRead(void) {
 			tries++;
 		}
 	} while (newData == false && tries < MAX_SONAR_TRIES - 1);
+	HAL_UART_Transmit(Get_DebugHandle(), (uint8_t *)RxBuffer, 4, 20);
+	serialPutStr((char *)"\n");
 	return dist_mm;
 }
 
 uint16_t getSonarDistance(void) {
 	uint16_t dist_mm = 0;
 	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET);
-	singleRead();
-	singleRead();
 	for (int i = 0; i < MAX_SONAR_SAMPLES; i++) {
 		readings_arr[i] = singleRead();
-		HAL_Delay(MAX_SONAR_SAMPLING_DELAY);
+		HAL_Delay(250);
 	}
 	dist_mm = median(MAX_SONAR_SAMPLES);
 	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET);

@@ -1,6 +1,5 @@
-Common_Sources/date_time.o: \
- C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/date_time.c \
- C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/date_time.h \
+Core/Common_Sources/os_port_freertos.o: \
+ C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/os_port_freertos.c \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/os_port.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Core/Inc/os_port_config.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/compiler_port.h \
@@ -16,8 +15,8 @@ Common_Sources/date_time.o: \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
-C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/date_time.h:
+ C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/debug.h
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/os_port.h:
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Core/Inc/os_port_config.h:
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/compiler_port.h:
@@ -34,3 +33,4 @@ C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/common/debug.h:

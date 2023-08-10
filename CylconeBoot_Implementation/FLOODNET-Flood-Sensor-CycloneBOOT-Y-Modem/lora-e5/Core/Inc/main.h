@@ -73,7 +73,7 @@ ADC_HandleTypeDef *Get_AdcHandle(void);
 
 /* Private defines -----------------------------------------------------------*/
 
-#define ADC_SW_Pin GPIO_PIN_7
+#define ADC_SW_Pin GPIO_PIN_10
 #define ADC_SW_GPIO_Port GPIOB
 #define FLASH_CS_Pin GPIO_PIN_9
 #define FLASH_CS_GPIO_Port GPIOB

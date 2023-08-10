@@ -27,6 +27,7 @@ Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_tim_ex.o: \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_gpio_ex.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c_ex.h \
+ C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_lptim.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_pwr.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_pwr.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_pwr_ex.h \
@@ -71,6 +72,7 @@ C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_gpio_ex.h:
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c_ex.h:
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_lptim.h:
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_pwr.h:
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_pwr.h:
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_pwr_ex.h:

@@ -332,7 +332,8 @@ void SystemClock_Config(void)
 	/** Initializes the CPU, AHB and APB buses clocks
 	 */
 	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI
-			|RCC_OSCILLATORTYPE_MSI;
+			|RCC_OSCILLATORTYPE_MSI | RCC_OSCILLATORTYPE_LSE;
+	RCC_OscInitStruct.LSEState = RCC_LSE_ON;
 	RCC_OscInitStruct.HSIState = RCC_HSI_ON;
 	RCC_OscInitStruct.MSIState = RCC_MSI_ON;
 	RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -382,7 +383,7 @@ static void MX_ADC_Init(void)
 	/** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
 	 */
 	hadc.Instance = ADC;
-	hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+	hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
 	hadc.Init.Resolution = ADC_RESOLUTION_12B;
 	hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
 	hadc.Init.ScanConvMode = ADC_SCAN_DISABLE;
@@ -395,9 +396,9 @@ static void MX_ADC_Init(void)
 	hadc.Init.ExternalTrigConv = ADC_SOFTWARE_START;
 	hadc.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
 	hadc.Init.DMAContinuousRequests = DISABLE;
-	hadc.Init.Overrun = ADC_OVR_DATA_PRESERVED;
-	hadc.Init.SamplingTimeCommon1 = ADC_SAMPLETIME_1CYCLE_5;
-	hadc.Init.SamplingTimeCommon2 = ADC_SAMPLETIME_1CYCLE_5;
+	hadc.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+	hadc.Init.SamplingTimeCommon1 = ADC_SAMPLETIME_39CYCLES_5;
+	hadc.Init.SamplingTimeCommon2 = ADC_SAMPLETIME_39CYCLES_5;
 	hadc.Init.OversamplingMode = DISABLE;
 	hadc.Init.TriggerFrequencyMode = ADC_TRIGGER_FREQ_HIGH;
 	if (HAL_ADC_Init(&hadc) != HAL_OK)
@@ -405,7 +406,13 @@ static void MX_ADC_Init(void)
 		Error_Handler();
 	}
 	/* USER CODE BEGIN ADC_Init 2 */
-
+	 GPIO_InitTypeDef GPIO_InitStruct = {0};
+	__HAL_RCC_ADC_CLK_ENABLE();
+	__HAL_RCC_GPIOB_CLK_ENABLE();
+	GPIO_InitStruct.Pin = GPIO_PIN_4;
+	GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 	/* USER CODE END ADC_Init 2 */
 
 }
@@ -466,42 +473,43 @@ static void MX_I2C2_Init(void)
 static void MX_LPUART1_UART_Init(void)
 {
 
-	/* USER CODE BEGIN LPUART1_Init 0 */
+  /* USER CODE BEGIN LPUART1_Init 0 */
 
-	/* USER CODE END LPUART1_Init 0 */
+  /* USER CODE END LPUART1_Init 0 */
 
-	/* USER CODE BEGIN LPUART1_Init 1 */
+  /* USER CODE BEGIN LPUART1_Init 1 */
 
-	/* USER CODE END LPUART1_Init 1 */
-	hlpuart1.Instance = LPUART1;
-	hlpuart1.Init.BaudRate = 9600;
-	hlpuart1.Init.WordLength = UART_WORDLENGTH_8B;
-	hlpuart1.Init.StopBits = UART_STOPBITS_1;
-	hlpuart1.Init.Parity = UART_PARITY_NONE;
-	hlpuart1.Init.Mode = UART_MODE_RX;
-	hlpuart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-	hlpuart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-	hlpuart1.Init.ClockPrescaler = UART_PRESCALER_DIV1;
-	hlpuart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-	if (HAL_HalfDuplex_Init(&hlpuart1) != HAL_OK)
-	{
-		Error_Handler();
-	}
-	if (HAL_UARTEx_SetTxFifoThreshold(&hlpuart1, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
-	{
-		Error_Handler();
-	}
-	if (HAL_UARTEx_SetRxFifoThreshold(&hlpuart1, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
-	{
-		Error_Handler();
-	}
-	if (HAL_UARTEx_DisableFifoMode(&hlpuart1) != HAL_OK)
-	{
-		Error_Handler();
-	}
-	/* USER CODE BEGIN LPUART1_Init 2 */
+  /* USER CODE END LPUART1_Init 1 */
+  hlpuart1.Instance = LPUART1;
+  hlpuart1.Init.BaudRate = 9600;
+  hlpuart1.Init.WordLength = UART_WORDLENGTH_8B;
+  hlpuart1.Init.StopBits = UART_STOPBITS_1;
+  hlpuart1.Init.Parity = UART_PARITY_NONE;
+  hlpuart1.Init.Mode = UART_MODE_RX;
+  hlpuart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  hlpuart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  hlpuart1.Init.ClockPrescaler = UART_PRESCALER_DIV1;
+  hlpuart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_SWAP_INIT;
+  hlpuart1.AdvancedInit.Swap = UART_ADVFEATURE_SWAP_ENABLE;
+  if (HAL_HalfDuplex_Init(&hlpuart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_SetTxFifoThreshold(&hlpuart1, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_SetRxFifoThreshold(&hlpuart1, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_EnableFifoMode(&hlpuart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN LPUART1_Init 2 */
 
-	/* USER CODE END LPUART1_Init 2 */
+  /* USER CODE END LPUART1_Init 2 */
 
 }
 

@@ -36,11 +36,6 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>Common_Sources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
 			<name>CycloneBOOT_Headers</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -106,34 +101,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/str.h</locationURI>
 		</link>
 		<link>
-			<name>Common_Sources/cpu_endian.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/cpu_endian.c</locationURI>
-		</link>
-		<link>
-			<name>Common_Sources/date_time.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/date_time.c</locationURI>
-		</link>
-		<link>
-			<name>Common_Sources/os_port_freertos.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/os_port_freertos.c</locationURI>
-		</link>
-		<link>
-			<name>Common_Sources/path.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/path.c</locationURI>
-		</link>
-		<link>
-			<name>Common_Sources/resource_manager.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/resource_manager.c</locationURI>
-		</link>
-		<link>
-			<name>Common_Sources/str.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/str.c</locationURI>
+			<name>Core/Common_Sources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
 			<name>CycloneBOOT_Headers/cboot_error.h</name>
@@ -794,6 +764,36 @@
 			<name>CycloneCRYPTO_Sources/yarrow.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Oryx/cyclone_crypto/rng/yarrow.c</locationURI>
+		</link>
+		<link>
+			<name>Core/Common_Sources/cpu_endian.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/cpu_endian.c</locationURI>
+		</link>
+		<link>
+			<name>Core/Common_Sources/date_time.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/date_time.c</locationURI>
+		</link>
+		<link>
+			<name>Core/Common_Sources/os_port_freertos.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/os_port_freertos.c</locationURI>
+		</link>
+		<link>
+			<name>Core/Common_Sources/path.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/path.c</locationURI>
+		</link>
+		<link>
+			<name>Core/Common_Sources/resource_manager.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/resource_manager.c</locationURI>
+		</link>
+		<link>
+			<name>Core/Common_Sources/str.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Oryx/common/str.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -1,5 +1,5 @@
-Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart_ex.o: \
- ../Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart_ex.c \
+Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_lptim.o: \
+ ../Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_lptim.c \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Core/Inc/stm32wlxx_hal_conf.h \
  C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/lora-e5/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_dma.h \

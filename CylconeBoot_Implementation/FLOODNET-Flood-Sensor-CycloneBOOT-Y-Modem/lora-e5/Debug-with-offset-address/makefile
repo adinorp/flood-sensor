@@ -20,7 +20,7 @@ RM := rm -rf
 -include CycloneBOOT_Sources/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
--include Common_Sources/subdir.mk
+-include Core/Common_Sources/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)

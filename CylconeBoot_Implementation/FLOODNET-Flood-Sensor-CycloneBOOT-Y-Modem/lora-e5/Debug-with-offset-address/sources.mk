@@ -23,7 +23,7 @@ OBJCOPY_BIN :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-Common_Sources \
+Core/Common_Sources \
 Core/Src \
 Core/Startup \
 CycloneBOOT_Sources \

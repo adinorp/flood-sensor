@@ -4,4 +4,5 @@ C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation
 ../FloodnetDriver/DeviceCommands.c:52:6:commandGetDistance	1
 ../FloodnetDriver/DeviceCommands.c:60:6:commandGetVersion	1
 ../FloodnetDriver/DeviceCommands.c:67:6:commandReboot	0
-../FloodnetDriver/DeviceCommands.c:71:6:commandInvalid	1
+../FloodnetDriver/DeviceCommands.c:72:6:commandSleep	1
+../FloodnetDriver/DeviceCommands.c:76:6:commandInvalid	1

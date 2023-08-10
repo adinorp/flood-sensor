@@ -1,2 +1,2 @@
-Adc.c:19:17:ReadADCChannel	5
-Adc.c:46:10:AdcRead_VBatt	1
+../Core/Src/Adc.c:19:17:ReadADCChannel	5
+../Core/Src/Adc.c:46:10:AdcRead_VBatt	1

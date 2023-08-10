@@ -93,8 +93,8 @@ ADC_HandleTypeDef *Get_AdcHandle(void);
 #define MB_CTL_Pin GPIO_PIN_1	/* Manually swapped with PC0, different from .ioc configuration */
 #define MB_CTL_GPIO_Port GPIOC
 
-//#define W25Q80DV			/* 1 M-bit flash IC*/
-#define W25Q64JV			/* 8 M-bit flash IC*/
+#define W25Q80DV			/* 1 M-bit flash IC*/
+//#define W25Q64JV			/* 8 M-bit flash IC*/
 
 //
 //Un-comment one of the following lines to select the application version

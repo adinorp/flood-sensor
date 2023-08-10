@@ -11768,7 +11768,7 @@ void Flash__GetJEDEC_ID(uint32_t *jdecId)
  8004cc4:	2001      	moveq	r0, #1
  8004cc6:	b003      	add	sp, #12
  8004cc8:	f85d fb04 	ldr.w	pc, [sp], #4
- 8004ccc:	00ef4017 	.word	0x00ef4017
+ 8004ccc:	00ef4014 	.word	0x00ef4014
 
 08004cd0 <Flash__ReadDeviceStatus1>:
 /**

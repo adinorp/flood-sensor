@@ -51,7 +51,7 @@ void commandReadDeviceBattery(char *data)
 char sonarBuffer[100];
 void commandGetDistance(char *data)
 {
-	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET); 		/* turn on */
+	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_RESET); 		/* turn on */
 	sprintf(sonarBuffer,"OK,DISTREAD %d\n",getSonarDistance());
 	serialPutStr(sonarBuffer);
 //	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET);	/* turn off to save power */

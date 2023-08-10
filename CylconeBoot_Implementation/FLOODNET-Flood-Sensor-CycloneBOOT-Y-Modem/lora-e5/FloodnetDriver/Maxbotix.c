@@ -59,27 +59,30 @@ static uint16_t singleRead(void) {
 
 uint16_t getSonarDistance(void) {
 	uint16_t dist_mm = 0;
-	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET);
+	/* RESET IS ON, SET IS OFF! is this in reverse? wdik */
+	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_RESET);
+	/* First two are from the BOOT UP message of Maxbotix */
+	singleRead();
+	singleRead();
 	for (int i = 0; i < MAX_SONAR_SAMPLES; i++) {
 		readings_arr[i] = singleRead();
 		HAL_Delay(250);
 	}
-	dist_mm = median(MAX_SONAR_SAMPLES);
 	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET);
-//	switch (AVERAGING_METHOD) {
-//	case 1: /* Mean */
-//		dist_mm = mean(MAX_SONAR_SAMPLES);
-//		break;
-//	case 2: /* Median */
-//		dist_mm = median(MAX_SONAR_SAMPLES);
-//		break;
-//	case 3: /* Mode */
-//		dist_mm = mode_(MAX_SONAR_SAMPLES);
-//		break;
-//	default: /* should never reach here */
-//		dist_mm = singleRead();
-//		break;
-//	}
+	switch (AVERAGING_METHOD) {
+	case 1: /* Mean */
+		dist_mm = mean(MAX_SONAR_SAMPLES);
+		break;
+	case 2: /* Median */
+		dist_mm = median(MAX_SONAR_SAMPLES);
+		break;
+	case 3: /* Mode */
+		dist_mm = mode_(MAX_SONAR_SAMPLES);
+		break;
+	default: /* should never reach here */
+		dist_mm = singleRead();
+		break;
+	}
 	return dist_mm;
 }
 

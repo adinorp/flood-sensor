@@ -1,5 +1,5 @@
-C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2169:26:LL_RCC_GetUSARTClockSource	16	static
-C:/Users/adino/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2200:26:LL_RCC_GetLPUARTClockSource	16	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2169:26:LL_RCC_GetUSARTClockSource	16	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/Floodnet/Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:2200:26:LL_RCC_GetLPUARTClockSource	16	static
 ../Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart.c:307:19:HAL_UART_Init	16	static
 ../Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart.c:380:19:HAL_HalfDuplex_Init	16	static
 ../Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_uart.c:453:19:HAL_LIN_Init	16	static

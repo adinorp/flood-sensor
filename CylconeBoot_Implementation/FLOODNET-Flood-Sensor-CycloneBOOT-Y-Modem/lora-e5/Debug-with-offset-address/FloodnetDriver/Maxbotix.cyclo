@@ -1,8 +1,8 @@
 ../FloodnetDriver/Maxbotix.c:22:17:singleRead	10
 ../FloodnetDriver/Maxbotix.c:60:10:getSonarDistance	2
-../FloodnetDriver/Maxbotix.c:86:13:swap	1
-../FloodnetDriver/Maxbotix.c:92:12:partition	3
-../FloodnetDriver/Maxbotix.c:105:13:quickSort	2
-../FloodnetDriver/Maxbotix.c:113:17:mean	2
-../FloodnetDriver/Maxbotix.c:121:17:median	2
-../FloodnetDriver/Maxbotix.c:131:17:mode_	4
+../FloodnetDriver/Maxbotix.c:89:13:swap	1
+../FloodnetDriver/Maxbotix.c:95:12:partition	3
+../FloodnetDriver/Maxbotix.c:108:13:quickSort	2
+../FloodnetDriver/Maxbotix.c:116:17:mean	2
+../FloodnetDriver/Maxbotix.c:124:17:median	2
+../FloodnetDriver/Maxbotix.c:134:17:mode_	4

@@ -70,8 +70,8 @@ SPI_HandleTypeDef   *Get_SpiHandle(void);
 #define EXT_PWR_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
-//#define W25Q80DV			/* 1 M-bit flash IC*/
-#define W25Q64JV			/* 8 M-bit flash IC*/
+#define W25Q80DV			/* 1 M-bit flash IC*/
+//#define W25Q64JV			/* 8 M-bit flash IC*/
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

@@ -1,2 +1,2 @@
-scheduler.c:21:6:OS_Init	1
-scheduler.c:27:6:OS_Run	3
+../Core/Src/scheduler.c:21:6:OS_Init	1
+../Core/Src/scheduler.c:27:6:OS_Run	3

@@ -1,8 +1,8 @@
 ../FloodnetDriver/Maxbotix.c:22:17:singleRead	40	static
-../FloodnetDriver/Maxbotix.c:60:10:getSonarDistance	16	static
-../FloodnetDriver/Maxbotix.c:89:13:swap	24	static
-../FloodnetDriver/Maxbotix.c:95:12:partition	32	static
-../FloodnetDriver/Maxbotix.c:108:13:quickSort	24	static
-../FloodnetDriver/Maxbotix.c:116:17:mean	24	static
-../FloodnetDriver/Maxbotix.c:124:17:median	16	static
-../FloodnetDriver/Maxbotix.c:134:17:mode_	32	static
+../FloodnetDriver/Maxbotix.c:58:10:getSonarDistance	16	static
+../FloodnetDriver/Maxbotix.c:87:13:swap	24	static
+../FloodnetDriver/Maxbotix.c:93:12:partition	32	static
+../FloodnetDriver/Maxbotix.c:106:13:quickSort	24	static
+../FloodnetDriver/Maxbotix.c:114:17:mean	24	static
+../FloodnetDriver/Maxbotix.c:122:17:median	16	static
+../FloodnetDriver/Maxbotix.c:132:17:mode_	32	static

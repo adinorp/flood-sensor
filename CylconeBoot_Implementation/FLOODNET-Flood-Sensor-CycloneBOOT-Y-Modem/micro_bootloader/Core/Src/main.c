@@ -143,14 +143,14 @@ int main(void) {
 	/* USER CODE BEGIN 2 */
 
 	//Start-up message
-	TRACE_INFO("\r\n");
-	TRACE_INFO("*****************************\r\n");
-	TRACE_INFO("*** Micro Bootloader Demo ***\r\n");
-	TRACE_INFO("*****************************\r\n");
-	TRACE_INFO("Copyright: 2010-2021 Oryx Embedded SARL\r\n");
-	TRACE_INFO("Compiled: %s %s\r\n", __DATE__, __TIME__);
-	TRACE_INFO("Target: STM32F769\r\n");
-	TRACE_INFO("\r\n");
+//	TRACE_INFO("\r\n");
+//	TRACE_INFO("*****************************\r\n");
+//	TRACE_INFO("*** Micro Bootloader Demo ***\r\n");
+//	TRACE_INFO("*****************************\r\n");
+//	TRACE_INFO("Copyright: 2010-2021 Oryx Embedded SARL\r\n");
+//	TRACE_INFO("Compiled: %s %s\r\n", __DATE__, __TIME__);
+//	TRACE_INFO("Target: STM32F769\r\n");
+//	TRACE_INFO("\r\n");
 
     //Get default booloader user settings
     bootGetDefaultSettings(&bootSettings);

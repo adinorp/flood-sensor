@@ -54,9 +54,10 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
-
+void SystemClock_Config(void);
 /* USER CODE BEGIN EFP */
 void rTosDelay(uint32_t Delay);
+void MX_GPIO_Init(void);
 UART_HandleTypeDef *Get_DebugHandle(void);
 osMessageQId Get_TerminalQueueHandle(void);
 UART_HandleTypeDef *Get_SonarHandle(void);
@@ -68,7 +69,7 @@ osMutexId  Get_I2cMutexHandle(void);
 osMutexId  Get_RtcMutexHandle(void);
 I2C_HandleTypeDef   *Get_I2cHandle(void);
 ADC_HandleTypeDef *Get_AdcHandle(void);
-
+extern RTC_HandleTypeDef hrtc;
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -93,8 +94,8 @@ ADC_HandleTypeDef *Get_AdcHandle(void);
 #define MB_CTL_Pin GPIO_PIN_1	/* Manually swapped with PC0, different from .ioc configuration */
 #define MB_CTL_GPIO_Port GPIOC
 
-#define W25Q80DV			/* 1 M-bit flash IC*/
-//#define W25Q64JV			/* 8 M-bit flash IC*/
+//#define W25Q80DV			/* 1 M-bit flash IC*/
+#define W25Q64JV			/* 8 M-bit flash IC*/
 
 //
 //Un-comment one of the following lines to select the application version

@@ -1,7 +1,7 @@
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_boot/bootloader/boot_common.c:51:9:bootInitPrimaryFlash	32	static
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_boot/bootloader/boot_common.c:112:9:bootInitSecondaryFlash	32	static
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_boot/bootloader/boot_common.c:304:9:bootUpdateApp	560	static
-C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_boot/bootloader/boot_common.c:536:9:bootCheckImage	112	static
+C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_boot/bootloader/boot_common.c:536:9:bootCheckImage	104	static
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_boot/bootloader/boot_common.c:668:9:bootGetSlotImgHeader	88	static
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_boot/bootloader/boot_common.c:198:9:bootSelectUpdateImageSlot	88	static
 C:/Users/prane/OneDrive/Documents/GitHub/flood-sensor/CylconeBoot_Implementation/FLOODNET-Flood-Sensor-CycloneBOOT-Y-Modem/Oryx/cyclone_boot/bootloader/boot_common.c:705:9:bootCheckSlotAppResetVector	16	static

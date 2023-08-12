@@ -52,8 +52,6 @@ static uint16_t singleRead(void) {
 			tries++;
 		}
 	} while (newData == false && tries < MAX_SONAR_TRIES - 1);
-	HAL_UART_Transmit(Get_DebugHandle(), (uint8_t *)RxBuffer, 4, 20);
-	serialPutStr((char *)"\n");
 	return dist_mm;
 }
 
@@ -66,7 +64,7 @@ uint16_t getSonarDistance(void) {
 	singleRead();
 	for (int i = 0; i < MAX_SONAR_SAMPLES; i++) {
 		readings_arr[i] = singleRead();
-		HAL_Delay(250);
+		HAL_Delay(150);
 	}
 	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET);
 	switch (AVERAGING_METHOD) {

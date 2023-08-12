@@ -11,9 +11,14 @@
 #include "Adc.h"
 #include "Maxbotix.h"
 
+extern UART_HandleTypeDef huart2;
+extern UART_HandleTypeDef hlpuart1;
 
 char DataBuffer[200];
-char *Version = "4.0";
+
+void commandOK(char *data){
+	serialPutStr("OK\n");
+}
 
 void commandReadDeviceId(char *data)
 {
@@ -41,9 +46,8 @@ void commandReadDeviceId(char *data)
 
 void commandReadDeviceBattery(char *data)
 {
-
-	 serialPutStr("OK,BATTREAD");
-	 sprintf(DataBuffer,"OK,BATTREAD %d\n",AdcRead_VBatt());
+	 sprintf(DataBuffer,"%d\n",AdcRead_VBatt());
+	 HAL_Delay(250);
 	 serialPutStr(DataBuffer);
 }
 
@@ -52,7 +56,7 @@ char sonarBuffer[100];
 void commandGetDistance(char *data)
 {
 	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_RESET); 		/* turn on */
-	sprintf(sonarBuffer,"OK,DISTREAD %d\n",getSonarDistance());
+	sprintf(sonarBuffer,"%d\n",getSonarDistance());
 	serialPutStr(sonarBuffer);
 //	HAL_GPIO_WritePin(MB_PWR_GPIO_Port, MB_PWR_Pin, GPIO_PIN_SET);	/* turn off to save power */
 }
@@ -60,7 +64,7 @@ void commandGetDistance(char *data)
 void commandGetVersion(char *data)
 {
 
-	sprintf(DataBuffer,"OK,VERSION %s\n",Version);
+	sprintf(DataBuffer,"OK,VERSION %s\n","v0");
 	serialPutStr(DataBuffer);
 }
 
@@ -70,7 +74,41 @@ void commandReboot(char *data){
 
 
 void commandSleep(char *data){
-	serialPutStr("Sleep called...\n");
+	serialPutStr("SOK\n");
+	serialPutStr("SOK\n");
+	serialPutStr("SOK\n");
+	serialPutStr("SOK\n");
+	HAL_SuspendTick();
+	GPIO_InitTypeDef GPIO_InitStructure = {0};
+	GPIO_InitStructure.Pin = GPIO_PIN_All&(~GPIO_PIN_0);
+	GPIO_InitStructure.Mode = GPIO_MODE_ANALOG;
+	GPIO_InitStructure.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(GPIOA, &GPIO_InitStructure);
+	__HAL_RCC_GPIOA_CLK_DISABLE();
+	GPIO_InitStructure.Pin = GPIO_PIN_All;
+	GPIO_InitStructure.Mode = GPIO_MODE_ANALOG;
+	GPIO_InitStructure.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStructure);
+	__HAL_RCC_GPIOB_CLK_DISABLE();
+	HAL_GPIO_Init(GPIOC, &GPIO_InitStructure);
+	__HAL_RCC_GPIOC_CLK_DISABLE();
+	HAL_UART_MspDeInit(&huart2);
+	LL_PWR_ClearFlag_C1STOP_C1STB();
+	HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 0xFFFF, RTC_WAKEUPCLOCK_RTCCLK_DIV16,0);
+	HAL_PWREx_EnterSTOP1Mode(PWR_STOPENTRY_WFI);
+	HAL_RTCEx_DeactivateWakeUpTimer(&hrtc);
+	HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 0xFFFF, RTC_WAKEUPCLOCK_RTCCLK_DIV16,0);
+	HAL_PWREx_EnterSTOP1Mode(PWR_STOPENTRY_WFI);
+	HAL_RTCEx_DeactivateWakeUpTimer(&hrtc);
+	SystemClock_Config();
+	HAL_ResumeTick();
+	HAL_UART_MspInit(&huart2);
+	HAL_UART_MspInit(&hlpuart1);
+	MX_GPIO_Init();
+	for(int i=0;i<3;i++){
+		serialPutStr("..\n");
+		HAL_Delay(50);
+	}
 }
 
 void commandInvalid(char *data)

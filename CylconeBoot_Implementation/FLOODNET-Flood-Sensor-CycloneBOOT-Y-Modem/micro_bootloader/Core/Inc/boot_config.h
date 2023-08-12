@@ -20,7 +20,7 @@
 #define _BOOT_CONFIG_H
 
 //Bootloader trace level
-#define BOOT_TRACE_LEVEL TRACE_LEVEL_INFO
+#define BOOT_TRACE_LEVEL TRACE_LEVEL_OFF
 
 //Bootloader external flash memory encryption support
 #define BOOT_EXT_MEM_ENCRYPTION_SUPPORT DISABLED//ENABLED

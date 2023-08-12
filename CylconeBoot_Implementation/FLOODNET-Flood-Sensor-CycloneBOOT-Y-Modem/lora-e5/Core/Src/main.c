@@ -79,7 +79,7 @@ size_t pemIapSignPublicKeyLen;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-static void MX_GPIO_Init(void);
+void MX_GPIO_Init(void);
 static void MX_ADC_Init(void);
 static void MX_LPUART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
@@ -102,7 +102,7 @@ bool updateDevice()
 	uint8_t c;
 	bool status = false;
 	bool bootReady = false;
-	serialPutStr("E5 POR\n");
+	serialPutStr("OK\n");
 
     do
     {
@@ -217,6 +217,8 @@ int main(void)
 	MX_RTC_Init();
 	MX_SPI2_Init();
 	MX_I2C2_Init();
+
+
 	/* USER CODE BEGIN 2 */
 
 #if defined (IAP_SCENARIO_3)
@@ -284,22 +286,23 @@ int main(void)
 
 	// definition and creation of uartUserTask
 
-	if(updateDevice())
-	{
-		osThreadDef(uartUserTask, uartUserTaskHandler, osPriorityNormal, 0, 500);
-		uartUserTaskHandle = osThreadCreate(osThread(uartUserTask), NULL);
+//	if(updateDevice())
+//	{
+//		osThreadDef(uartUserTask, uartUserTaskHandler, osPriorityNormal, 0, 500);
+//		uartUserTaskHandle = osThreadCreate(osThread(uartUserTask), NULL);
+//
+//		// definition and creation of ledTask
+//		osThreadDef(ledTask, ledTaskHandler, osPriorityNormal, 0, 128);
+//		ledTaskHandle = osThreadCreate(osThread(ledTask), NULL);
+//	}
+//	else
+//	{
+//		osThreadDef(terminalTask, terminalTaskHandler, osPriorityNormal, 0, 500);
+//		terminalTaskHandle = osThreadCreate(osThread(terminalTask), NULL);
+//	}
 
-		// definition and creation of ledTask
-		osThreadDef(ledTask, ledTaskHandler, osPriorityNormal, 0, 128);
-		ledTaskHandle = osThreadCreate(osThread(ledTask), NULL);
-	}
-	else
-	{
-		osThreadDef(terminalTask, terminalTaskHandler, osPriorityNormal, 0, 500);
-		terminalTaskHandle = osThreadCreate(osThread(terminalTask), NULL);
-	}
-
-
+	osThreadDef(terminalTask, terminalTaskHandler, osPriorityNormal, 0, 500);
+	terminalTaskHandle = osThreadCreate(osThread(terminalTask), NULL);
 
 	/* USER CODE END RTOS_THREADS */
 
@@ -691,7 +694,7 @@ static void MX_SPI2_Init(void)
  * @param None
  * @retval None
  */
-static void MX_GPIO_Init(void)
+void MX_GPIO_Init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
 	/* USER CODE BEGIN MX_GPIO_Init_1 */
@@ -706,7 +709,7 @@ static void MX_GPIO_Init(void)
 	HAL_GPIO_WritePin(GPIOB, ADC_SW_Pin|FLASH_CS_Pin|MB_OC_Pin|LED_Pin, GPIO_PIN_RESET);
 
 	/*Configure GPIO pin Output Level */
-	HAL_GPIO_WritePin(GPIOA, MB_PWR_Pin|EXT_PWR_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOA, MB_PWR_Pin|EXT_PWR_Pin, GPIO_PIN_SET);
 
 	/*Configure GPIO pin Output Level */
 	HAL_GPIO_WritePin(MB_CTL_GPIO_Port, MB_CTL_Pin, GPIO_PIN_RESET);

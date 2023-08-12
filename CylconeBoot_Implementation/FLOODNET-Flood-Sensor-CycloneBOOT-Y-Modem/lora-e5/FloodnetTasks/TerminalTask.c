@@ -49,9 +49,8 @@ command_t const gCommandTable[DEVICE_COMMAND_TABLE_LEN] =
 	{"GETDISTANCE",commandGetDistance},
 	{"VERSION",commandGetVersion},
 	{"REBOOT",commandReboot},
-	{"SLEEP",commandSleep}
-
-
+	{"SLEEP",commandSleep},
+	{"OK",commandOK}
 };
 
 
@@ -71,11 +70,9 @@ void terminalTaskHandler(void const * argument)
 	int tCommandReady = 0;
 	char tRxedChar;
 
-
-
 	HAL_UART_Receive_IT(Get_DebugHandle(),(uint8_t*)uartData,UART_RECEIVE_SIZE);
 	/* Infinite loop */
-	serialPutStr("Terminal Thread Initialized");
+
 	for(;;)
 	{
 		/* Process Terminal Commands */
